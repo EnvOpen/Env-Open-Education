@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Env Open Education</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Env Open Education</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link active">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="python-course.html" class="nav-link">Python</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript-course.html" class="nav-link">JavaScript</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Courses</h1>
+                <p>Choose your programming journey with our comprehensive, hands-on courses</p>
+            </div>
+        </section>
+
+        <section class="courses-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Courses</button>
+                    <button class="filter-btn" data-filter="beginner">Beginner</button>
+                    <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+                    <button class="filter-btn" data-filter="advanced">Advanced</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses-main">
+            <div class="container">
+                <div class="courses-grid">
+                    <div class="course-card-detailed" data-level="beginner">
+                        <div class="course-image">
+                            <div class="course-icon">🐍</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-header">
+                                <h3>Python Programming</h3>
+                                <div class="course-meta">
+                                    <span class="course-level beginner">Beginner to Advanced</span>
+                                    <span class="course-duration">8 weeks</span>
+                                </div>
+                            </div>
+                            <p>Master Python from the ground up with our comprehensive course. Learn syntax, data structures, object-oriented programming, and build real-world applications.</p>
+                            
+                            <div class="course-highlights">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li>Python syntax and fundamentals</li>
+                                    <li>Data structures and algorithms</li>
+                                    <li>Object-oriented programming</li>
+                                    <li>File handling and web scraping</li>
+                                    <li>Building GUI applications</li>
+                                </ul>
+                            </div>
+
+                            <div class="course-features">
+                                <span class="feature-tag">25+ Lessons</span>
+                                <span class="feature-tag">10+ Projects</span>
+                                <span class="feature-tag">Interactive Coding</span>
+                                <span class="feature-tag">Trinket Playground</span>
+                            </div>
+
+                            <div class="course-progress">
+                                <div class="progress-info">
+                                    <span>Course Progress</span>
+                                    <span>0%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+
+                            <a href="python-course.html" class="btn btn-primary">Start Python Course</a>
+                        </div>
+                    </div>
+
+                    <div class="course-card-detailed" data-level="beginner">
+                        <div class="course-image">
+                            <div class="course-icon">📜</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-header">
+                                <h3>JavaScript Development</h3>
+                                <div class="course-meta">
+                                    <span class="course-level beginner">Beginner to Advanced</span>
+                                    <span class="course-duration">10 weeks</span>
+                                </div>
+                            </div>
+                            <p>Become a JavaScript expert and build dynamic web applications. From basics to advanced concepts including modern ES6+ features and popular frameworks.</p>
+                            
+                            <div class="course-highlights">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li>JavaScript fundamentals and ES6+</li>
+                                    <li>DOM manipulation and events</li>
+                                    <li>Asynchronous programming</li>
+                                    <li>APIs and AJAX</li>
+                                    <li>Modern web development</li>
+                                </ul>
+                            </div>
+
+                            <div class="course-features">
+                                <span class="feature-tag">30+ Lessons</span>
+                                <span class="feature-tag">12+ Projects</span>
+                                <span class="feature-tag">Interactive Coding</span>
+                                <span class="feature-tag">Live Examples</span>
+                            </div>
+
+                            <div class="course-progress">
+                                <div class="progress-info">
+                                    <span>Course Progress</span>
+                                    <span>0%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+
+                            <a href="javascript-course.html" class="btn btn-primary">Start JavaScript Course</a>
+                        </div>
+                    </div>
+
+                    <div class="course-card-detailed" data-level="intermediate">
+                        <div class="course-image">
+                            <div class="course-icon">🌐</div>
+                        </div>
+                        <div class="course-content">
+                            <div class="course-header">
+                                <h3>Python Web Development</h3>
+                                <div class="course-meta">
+                                    <span class="course-level intermediate">Intermediate</span>
+                                    <span class="course-duration">6-8 weeks</span>
+                                </div>
+                            </div>
+                            <p>Build dynamic web applications with Python using Flask and modern web development practices. Learn APIs, databases, authentication, and deployment.</p>
+                            
+                            <div class="course-highlights">
+                                <h4>What You'll Learn:</h4>
+                                <ul>
+                                    <li>Flask framework fundamentals</li>
+                                    <li>Database integration with SQLAlchemy</li>
+                                    <li>RESTful API development</li>
+                                    <li>User authentication & security</li>
+                                    <li>Deployment and production setup</li>
+                                </ul>
+                            </div>
+
+                            <div class="course-features">
+                                <span class="feature-tag">12 Lessons</span>
+                                <span class="feature-tag">Full-Stack Projects</span>
+                                <span class="feature-tag">API Development</span>
+                                <span class="feature-tag">Real-World Apps</span>
+                            </div>
+
+                            <div class="course-progress">
+                                <div class="progress-info">
+                                    <span>Course Progress</span>
+                                    <span>0%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 0%"></div>
+                                </div>
+                            </div>
+
+                            <a href="python-web-development.html" class="btn btn-primary">Start Web Development Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-path">
+            <div class="container">
+                <h2>Recommended Learning Path</h2>
+                <div class="path-container">
+                    <div class="path-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Choose Your First Language</h3>
+                            <p>Start with either Python (great for beginners) or JavaScript (essential for web development)</p>
+                        </div>
+                    </div>
+                    <div class="path-arrow">→</div>
+                    <div class="path-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Master the Fundamentals</h3>
+                            <p>Complete the course exercises and build the assigned projects</p>
+                        </div>
+                    </div>
+                    <div class="path-arrow">→</div>
+                    <div class="path-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Expand Your Skills</h3>
+                            <p>Learn the second language to become a well-rounded developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-features-section">
+            <div class="container">
+                <h2>Course Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">💻</div>
+                        <h3>Interactive Coding Environment</h3>
+                        <p>Write and run code directly in your browser with our Trinket.io integration. No setup required!</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📋</div>
+                        <h3>Hands-on Projects</h3>
+                        <p>Build real applications and tools that you can add to your portfolio and show to employers.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Instant Feedback</h3>
+                        <p>Get immediate results and feedback on your code to learn faster and fix mistakes quickly.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h3>Learn Anywhere</h3>
+                        <p>Access courses on any device. Learn on your schedule, whether at home or on the go.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <h2>Start Your Coding Journey Today</h2>
+                <p>Join thousands of students who have learned to code with our interactive courses.</p>
+                <div class="cta-buttons">
+                    <a href="python-course.html" class="btn btn-primary">Try Python Course</a>
+                    <a href="javascript-course.html" class="btn btn-secondary">Try JavaScript Course</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Env Open Education</h3>
+                    <p>Empowering the next generation of programmers through interactive, hands-on learning experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="python-course.html">Python Programming</a></li>
+                        <li><a href="javascript-course.html">JavaScript Development</a></li>
+                        <li><a href="python-web-development.html">Python Web Development</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Env Open. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

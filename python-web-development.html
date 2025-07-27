@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Web Development Course - Env Open Education</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">Env Open Education</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="courses.html" class="nav-link active">Courses</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Python Web Development Course</h1>
+                        <p class="hero-subtitle">Master Flask, Django, APIs, and modern web development with Python</p>
+                        <p class="course-description">
+                            Build dynamic web applications from scratch using Python's most popular frameworks. 
+                            Learn Flask fundamentals, database integration, API development, authentication, 
+                            deployment, and modern web development practices.
+                        </p>
+                        <div class="course-meta">
+                            <span class="meta-item">📚 12 Lessons</span>
+                            <span class="meta-item">🌐 Full-Stack Development</span>
+                            <span class="meta-item">⏱️ 6-8 Weeks</span>
+                            <span class="meta-item">🔧 Flask & APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    <div class="course-sidebar">
+                        <div class="progress-card">
+                            <h3>Your Progress</h3>
+                            <div class="progress-circle">
+                                <span class="progress-text">0%</span>
+                            </div>
+                            <p>0 of 12 lessons completed</p>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <h3>Course Modules</h3>
+                            <div class="module-list">
+                                <div class="module-item active">
+                                    <h4>Module 1: Flask Fundamentals</h4>
+                                    <ul class="lesson-list">
+                                        <li class="lesson-item active"><a href="#lesson-1">Introduction to Flask</a></li>
+                                        <li class="lesson-item"><a href="#lesson-2">Routes and Views</a></li>
+                                        <li class="lesson-item"><a href="#lesson-3">Templates with Jinja2</a></li>
+                                    </ul>
+                                </div>
+                                <div class="module-item">
+                                    <h4>Module 2: Database Integration</h4>
+                                    <ul class="lesson-list">
+                                        <li class="lesson-item"><a href="#lesson-4">SQLAlchemy ORM</a></li>
+                                        <li class="lesson-item"><a href="#lesson-5">Database Models</a></li>
+                                        <li class="lesson-item"><a href="#lesson-6">Forms and User Input</a></li>
+                                    </ul>
+                                </div>
+                                <div class="module-item">
+                                    <h4>Module 3: API Development</h4>
+                                    <ul class="lesson-list">
+                                        <li class="lesson-item"><a href="#lesson-7">RESTful APIs</a></li>
+                                        <li class="lesson-item"><a href="#lesson-8">JSON and Data Handling</a></li>
+                                        <li class="lesson-item"><a href="#lesson-9">Authentication & Security</a></li>
+                                    </ul>
+                                </div>
+                                <div class="module-item">
+                                    <h4>Module 4: Deployment & Advanced</h4>
+                                    <ul class="lesson-list">
+                                        <li class="lesson-item"><a href="#lesson-10">Testing Flask Apps</a></li>
+                                        <li class="lesson-item"><a href="#lesson-11">Deployment Strategies</a></li>
+                                        <li class="lesson-item"><a href="#lesson-12">Advanced Features</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-main">
+                        <div class="lesson-content" id="lesson-1">
+                            <h2>Lesson 1: Introduction to Flask</h2>
+                            <p>Welcome to Python Web Development! Flask is a lightweight and powerful web framework that makes it easy to build web applications in Python.</p>
+                            
+                            <h3>What is Flask?</h3>
+                            <p>Flask is a micro web framework written in Python. It's called a "micro" framework because it doesn't require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.</p>
+
+                            <h3>Setting Up Your Development Environment</h3>
+                            <p>Before we start building web applications, let's set up our development environment with Flask and essential tools.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Installing Flask and Dependencies</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Bash</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Create a virtual environment
+python -m venv flask_env
+
+# Activate virtual environment (Windows)
+flask_env\Scripts\activate
+
+# Activate virtual environment (macOS/Linux)
+source flask_env/bin/activate
+
+# Install Flask and essential packages
+pip install Flask
+pip install python-dotenv
+pip install Flask-SQLAlchemy
+
+# Create requirements.txt
+pip freeze > requirements.txt</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Your First Flask Application</h3>
+                            <p>Let's create a simple "Hello World" Flask application to understand the basics.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Basic Flask App (app.py)</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask
+
+# Create Flask application instance
+app = Flask(__name__)
+
+# Define a route for the home page
+@app.route('/')
+def home():
+    return '<h1>Hello, Flask World!</h1>'
+
+# Define a route with a parameter
+@app.route('/user/<name>')
+def user_profile(name):
+    return f'<h1>Welcome, {name}!</h1>'
+
+# Define a route for about page
+@app.route('/about')
+def about():
+    return '''
+    <h1>About Our Flask App</h1>
+    <p>This is my first Flask web application!</p>
+    <a href="/">Go back home</a>
+    '''
+
+# Define a route that accepts different HTTP methods
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        return '<h1>Thank you for your message!</h1>'
+    return '''
+    <h1>Contact Us</h1>
+    <form method="POST">
+        <p>Send us a message!</p>
+        <button type="submit">Send</button>
+    </form>
+    '''
+
+# Run the application in debug mode
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Understanding Flask Routing</h3>
+                            <p>Routes in Flask define the URLs that your application responds to. Let's explore different types of routes.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Advanced Routing</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+# Route with multiple HTTP methods
+@app.route('/api/data', methods=['GET', 'POST', 'PUT', 'DELETE'])
+def handle_data():
+    if request.method == 'GET':
+        return jsonify({'message': 'Getting data'})
+    elif request.method == 'POST':
+        return jsonify({'message': 'Creating data'})
+    elif request.method == 'PUT':
+        return jsonify({'message': 'Updating data'})
+    elif request.method == 'DELETE':
+        return jsonify({'message': 'Deleting data'})
+
+# Route with different parameter types
+@app.route('/product/<int:product_id>')
+def show_product(product_id):
+    return f'<h1>Product ID: {product_id}</h1>'
+
+@app.route('/category/<string:category_name>')
+def show_category(category_name):
+    return f'<h1>Category: {category_name}</h1>'
+
+@app.route('/price/<float:price>')
+def show_price(price):
+    return f'<h1>Price: ${price:.2f}</h1>'
+
+# Route with query parameters
+@app.route('/search')
+def search():
+    query = request.args.get('q', '')
+    page = request.args.get('page', 1, type=int)
+    return f'<h1>Searching for: {query}</h1><p>Page: {page}</p>'
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Running Your Flask Application</h3>
+                            <p>There are several ways to run your Flask application during development.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Running Flask App</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Bash</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Method 1: Direct execution
+python app.py
+
+# Method 2: Using Flask CLI
+export FLASK_APP=app.py  # macOS/Linux
+set FLASK_APP=app.py     # Windows
+flask run
+
+# Method 3: With debug mode
+export FLASK_ENV=development
+flask run
+
+# Method 4: Custom host and port
+flask run --host=0.0.0.0 --port=5000</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="practice-section">
+                                <h3>Practice Exercise</h3>
+                                <p>Try creating your own Flask application with the following requirements:</p>
+                                
+                                <div class="concept-grid">
+                                    <div class="concept-card">
+                                        <h4>Basic Routes</h4>
+                                        <p>Create routes for home, about, and contact pages</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>Dynamic Routes</h4>
+                                        <p>Add a route that displays user profiles with URL parameters</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>API Endpoint</h4>
+                                        <p>Create a simple API endpoint that returns JSON data</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" disabled>← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-2" style="display: none;">
+                            <h2>Lesson 2: Routes and Views</h2>
+                            <p>Learn advanced routing techniques and how to organize your Flask application views effectively.</p>
+                            
+                            <h3>URL Building and Redirects</h3>
+                            <p>Flask provides powerful tools for building URLs dynamically and redirecting users.</p>
+
+                            <div class="code-example">
+                                <h4>Example: URL Building and Redirects</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask, url_for, redirect, request
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return f'''
+    <h1>Welcome to Flask Routing!</h1>
+    <ul>
+        <li><a href="{url_for('user_profile', username='john')}">John's Profile</a></li>
+        <li><a href="{url_for('about')}">About Page</a></li>
+        <li><a href="{url_for('login')}">Login</a></li>
+    </ul>
+    '''
+
+@app.route('/user/<username>')
+def user_profile(username):
+    return f'''
+    <h1>Profile: {username}</h1>
+    <p><a href="{url_for('index')}">Back to Home</a></p>
+    '''
+
+@app.route('/about')
+def about():
+    return '<h1>About Us</h1><p>This is our Flask application!</p>'
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        if username:
+            return redirect(url_for('user_profile', username=username))
+        else:
+            return redirect(url_for('login'))
+    
+    return '''
+    <h1>Login</h1>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Enter username" required>
+        <button type="submit">Login</button>
+    </form>
+    '''
+
+@app.route('/admin')
+def admin():
+    # Redirect unauthorized users
+    return redirect(url_for('login'))
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Error Handling</h3>
+                            <p>Handle HTTP errors gracefully with custom error pages.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Custom Error Handlers</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask, abort
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return '<h1>Home Page</h1><p><a href="/user/999">Non-existent User</a></p>'
+
+@app.route('/user/<int:user_id>')
+def user_profile(user_id):
+    # Simulate user lookup
+    users = {1: 'Alice', 2: 'Bob', 3: 'Charlie'}
+    
+    if user_id not in users:
+        abort(404)  # Trigger 404 error
+    
+    return f'<h1>User: {users[user_id]}</h1>'
+
+@app.route('/admin')
+def admin():
+    abort(403)  # Forbidden
+
+# Custom error handlers
+@app.errorhandler(404)
+def not_found(error):
+    return '''
+    <h1>Page Not Found</h1>
+    <p>The page you're looking for doesn't exist.</p>
+    <a href="/">Go Home</a>
+    ''', 404
+
+@app.errorhandler(403)
+def forbidden(error):
+    return '''
+    <h1>Access Forbidden</h1>
+    <p>You don't have permission to access this resource.</p>
+    <a href="/">Go Home</a>
+    ''', 403
+
+@app.errorhandler(500)
+def internal_error(error):
+    return '''
+    <h1>Internal Server Error</h1>
+    <p>Something went wrong on our end.</p>
+    <a href="/">Go Home</a>
+    ''', 500
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-3" style="display: none;">
+                            <h2>Lesson 3: Templates with Jinja2</h2>
+                            <p>Master Flask's powerful template engine to create dynamic HTML pages.</p>
+                            
+                            <h3>Creating Templates</h3>
+                            <p>Templates separate your HTML from Python code, making your application more maintainable.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Basic Template Structure</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">HTML</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code><!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Flask App{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .header { background: #f0f0f0; padding: 20px; margin-bottom: 20px; }
+        .nav a { margin-right: 15px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My Flask Application</h1>
+        <nav class="nav">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('users') }}">Users</a>
+        </nav>
+    </div>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Flask App</p>
+    </footer>
+</body>
+</html></code></pre>
+                                </div>
+                            </div>
+
+                            <div class="code-example">
+                                <h4>Example: Flask App with Templates</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    users = [
+        {'name': 'Alice', 'age': 25, 'city': 'New York'},
+        {'name': 'Bob', 'age': 30, 'city': 'San Francisco'},
+        {'name': 'Charlie', 'age': 35, 'city': 'London'}
+    ]
+    return render_template('index.html', users=users, title='Home')
+
+@app.route('/user/<name>')
+def user_detail(name):
+    user = {'name': name, 'joined': '2025-01-15', 'posts': 42}
+    return render_template('user.html', user=user)
+
+@app.route('/about')
+def about():
+    return render_template('about.html', title='About Us')
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Template with Logic</h3>
+                            <div class="code-example">
+                                <h4>Example: index.html Template</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">HTML</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code><!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - My Flask App{% endblock %}
+
+{% block content %}
+<h2>Welcome to Our Community!</h2>
+<p>We have {{ users|length }} amazing users.</p>
+
+{% if users %}
+    <h3>Our Users:</h3>
+    <ul>
+    {% for user in users %}
+        <li>
+            <strong>{{ user.name }}</strong> 
+            ({{ user.age }} years old, from {{ user.city }})
+            <a href="{{ url_for('user_detail', name=user.name) }}">View Profile</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No users found.</p>
+{% endif %}
+
+<h3>Current Time: {{ moment().format('YYYY-MM-DD HH:mm:ss') }}</h3>
+{% endblock %}</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-4" style="display: none;">
+                            <h2>Lesson 4: SQLAlchemy ORM</h2>
+                            <p>Learn to integrate databases into your Flask applications using SQLAlchemy ORM.</p>
+                            
+                            <h3>Setting Up SQLAlchemy</h3>
+                            <p>SQLAlchemy is a powerful ORM that makes database operations easy and pythonic.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Database Configuration</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask, render_template, request, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+
+app = Flask(__name__)
+
+# Database configuration
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SECRET_KEY'] = 'your-secret-key-here'
+
+# Initialize database
+db = SQLAlchemy(app)
+
+# Define models
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    
+    # Relationship with posts
+    posts = db.relationship('Post', backref='author', lazy=True)
+    
+    def __repr__(self):
+        return f'<User {self.username}>'
+
+class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    
+    def __repr__(self):
+        return f'<Post {self.title}>'
+
+# Create tables
+with app.app_context():
+    db.create_all()</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Database Operations</h3>
+                            <div class="code-example">
+                                <h4>Example: CRUD Operations</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>@app.route('/')
+def index():
+    posts = Post.query.order_by(Post.created_at.desc()).all()
+    return render_template('index.html', posts=posts)
+
+@app.route('/users')
+def users():
+    all_users = User.query.all()
+    return render_template('users.html', users=all_users)
+
+@app.route('/user/<int:user_id>')
+def user_profile(user_id):
+    user = User.query.get_or_404(user_id)
+    user_posts = Post.query.filter_by(user_id=user_id).all()
+    return render_template('profile.html', user=user, posts=user_posts)
+
+@app.route('/create_user', methods=['GET', 'POST'])
+def create_user():
+    if request.method == 'POST':
+        username = request.form['username']
+        email = request.form['email']
+        
+        # Check if user already exists
+        existing_user = User.query.filter_by(username=username).first()
+        if existing_user:
+            return 'Username already exists!'
+        
+        # Create new user
+        new_user = User(username=username, email=email)
+        db.session.add(new_user)
+        db.session.commit()
+        
+        return redirect(url_for('users'))
+    
+    return '''
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <button type="submit">Create User</button>
+    </form>
+    '''
+
+@app.route('/create_post', methods=['GET', 'POST'])
+def create_post():
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+        user_id = request.form['user_id']
+        
+        new_post = Post(title=title, content=content, user_id=user_id)
+        db.session.add(new_post)
+        db.session.commit()
+        
+        return redirect(url_for('index'))
+    
+    users = User.query.all()
+    return render_template('create_post.html', users=users)
+
+if __name__ == '__main__':
+    app.run(debug=True)</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-5" style="display: none;">
+                            <h2>Lesson 5: Database Models</h2>
+                            <p>Design robust database models with relationships, validations, and advanced SQLAlchemy features.</p>
+                            
+                            <h3>Advanced Model Relationships</h3>
+                            <p>Learn to create complex relationships between database models.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Advanced Models with Relationships</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///advanced_blog.db'
+db = SQLAlchemy(app)
+
+# Association table for many-to-many relationship
+post_tags = db.Table('post_tags',
+    db.Column('post_id', db.Integer, db.ForeignKey('post.id'), primary_key=True),
+    db.Column('tag_id', db.Integer, db.ForeignKey('tag.id'), primary_key=True)
+)
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    password_hash = db.Column(db.String(128))
+    bio = db.Column(db.Text)
+    avatar = db.Column(db.String(200), default='default.jpg')
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    is_active = db.Column(db.Boolean, default=True)
+    
+    # Relationships
+    posts = db.relationship('Post', backref='author', lazy=True, cascade='all, delete-orphan')
+    comments = db.relationship('Comment', backref='commenter', lazy=True)
+    
+    def __repr__(self):
+        return f'<User {self.username}>'
+    
+    @property
+    def post_count(self):
+        return len(self.posts)
+
+class Category(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), unique=True, nullable=False)
+    description = db.Column(db.Text)
+    
+    posts = db.relationship('Post', backref='category', lazy=True)
+
+class Tag(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(30), unique=True, nullable=False)
+    color = db.Column(db.String(7), default='#007bff')  # Hex color
+
+class Post(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    slug = db.Column(db.String(100), unique=True, nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    excerpt = db.Column(db.String(200))
+    featured_image = db.Column(db.String(200))
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    published = db.Column(db.Boolean, default=True)
+    view_count = db.Column(db.Integer, default=0)
+    
+    # Foreign keys
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
+    
+    # Relationships
+    comments = db.relationship('Comment', backref='post', lazy=True, cascade='all, delete-orphan')
+    tags = db.relationship('Tag', secondary=post_tags, lazy='subquery',
+                          backref=db.backref('posts', lazy=True))
+    
+    def __repr__(self):
+        return f'<Post {self.title}>'
+
+class Comment(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.Text, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    approved = db.Column(db.Boolean, default=True)
+    
+    # Foreign keys
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    post_id = db.Column(db.Integer, db.ForeignKey('post.id'), nullable=False)
+    
+    def __repr__(self):
+        return f'<Comment on {self.post.title}>'</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Model Methods and Properties</h3>
+                            <div class="code-example">
+                                <h4>Example: Custom Model Methods</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Add these methods to the Post model
+class Post(db.Model):
+    # ... existing fields ...
+    
+    @property
+    def formatted_date(self):
+        return self.created_at.strftime('%B %d, %Y')
+    
+    @property
+    def reading_time(self):
+        # Estimate reading time (average 200 words per minute)
+        word_count = len(self.content.split())
+        return max(1, round(word_count / 200))
+    
+    @property
+    def comment_count(self):
+        return Comment.query.filter_by(post_id=self.id, approved=True).count()
+    
+    def add_view(self):
+        self.view_count += 1
+        db.session.commit()
+    
+    @classmethod
+    def get_popular_posts(cls, limit=5):
+        return cls.query.order_by(cls.view_count.desc()).limit(limit).all()
+    
+    @classmethod
+    def get_recent_posts(cls, limit=10):
+        return cls.query.filter_by(published=True).order_by(cls.created_at.desc()).limit(limit).all()
+
+# Usage in routes
+@app.route('/post/<slug>')
+def post_detail(slug):
+    post = Post.query.filter_by(slug=slug).first_or_404()
+    post.add_view()  # Increment view count
+    
+    # Get related posts by category
+    related_posts = Post.query.filter(
+        Post.category_id == post.category_id,
+        Post.id != post.id,
+        Post.published == True
+    ).limit(3).all()
+    
+    return render_template('post.html', post=post, related_posts=related_posts)
+
+@app.route('/popular')
+def popular_posts():
+    posts = Post.get_popular_posts()
+    return render_template('popular.html', posts=posts)</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-6" style="display: none;">
+                            <h2>Lesson 6: Forms and User Input</h2>
+                            <p>Handle user input securely with Flask-WTF forms and validation.</p>
+                            
+                            <h3>Setting Up Flask-WTF</h3>
+                            <p>Flask-WTF provides CSRF protection and easy form handling.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Installing and Setting Up Forms</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Bash</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Install Flask-WTF
+pip install Flask-WTF
+
+# Install email validator
+pip install email-validator</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="code-example">
+                                <h4>Example: Creating Forms</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># forms.py
+from flask_wtf import FlaskForm
+from wtforms import StringField, TextAreaField, PasswordField, SelectField, BooleanField
+from wtforms.validators import DataRequired, Email, Length, EqualTo
+from wtforms.widgets import TextArea
+
+class RegistrationForm(FlaskForm):
+    username = StringField('Username', 
+                          validators=[DataRequired(), Length(min=4, max=20)])
+    email = StringField('Email', 
+                       validators=[DataRequired(), Email()])
+    password = PasswordField('Password', 
+                            validators=[DataRequired(), Length(min=8)])
+    confirm_password = PasswordField('Confirm Password',
+                                   validators=[DataRequired(), EqualTo('password')])
+    accept_terms = BooleanField('I accept the terms and conditions', 
+                               validators=[DataRequired()])
+
+class LoginForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    remember_me = BooleanField('Remember Me')
+
+class PostForm(FlaskForm):
+    title = StringField('Title', validators=[DataRequired(), Length(max=100)])
+    content = TextAreaField('Content', validators=[DataRequired()])
+    category = SelectField('Category', coerce=int)
+    tags = StringField('Tags (comma-separated)')
+    published = BooleanField('Publish immediately', default=True)
+    
+    def __init__(self, *args, **kwargs):
+        super(PostForm, self).__init__(*args, **kwargs)
+        from models import Category
+        self.category.choices = [(c.id, c.name) for c in Category.query.all()]
+
+class CommentForm(FlaskForm):
+    content = TextAreaField('Comment', 
+                           validators=[DataRequired(), Length(min=10, max=500)],
+                           render_kw={"rows": 4, "placeholder": "Share your thoughts..."})</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Using Forms in Routes</h3>
+                            <div class="code-example">
+                                <h4>Example: Form Handling in Flask</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask, render_template, redirect, url_for, flash, request
+from flask_sqlalchemy import SQLAlchemy
+from forms import RegistrationForm, LoginForm, PostForm, CommentForm
+from models import User, Post, Comment, Category
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your-secret-key'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegistrationForm()
+    
+    if form.validate_on_submit():
+        # Check if username already exists
+        existing_user = User.query.filter_by(username=form.username.data).first()
+        if existing_user:
+            flash('Username already exists. Please choose a different one.', 'danger')
+            return render_template('register.html', form=form)
+        
+        # Create new user
+        user = User(
+            username=form.username.data,
+            email=form.email.data,
+            password_hash=generate_password_hash(form.password.data)
+        )
+        
+        db.session.add(user)
+        db.session.commit()
+        
+        flash('Registration successful! You can now log in.', 'success')
+        return redirect(url_for('login'))
+    
+    return render_template('register.html', form=form)
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    
+    if form.validate_on_submit():
+        user = User.query.filter_by(username=form.username.data).first()
+        
+        if user and check_password_hash(user.password_hash, form.password.data):
+            # Login successful
+            session['user_id'] = user.id
+            flash('Login successful!', 'success')
+            
+            # Redirect to next page or dashboard
+            next_page = request.args.get('next')
+            return redirect(next_page or url_for('dashboard'))
+        else:
+            flash('Invalid username or password.', 'danger')
+    
+    return render_template('login.html', form=form)
+
+@app.route('/create_post', methods=['GET', 'POST'])
+def create_post():
+    if 'user_id' not in session:
+        flash('Please log in to create a post.', 'warning')
+        return redirect(url_for('login'))
+    
+    form = PostForm()
+    
+    if form.validate_on_submit():
+        # Create slug from title
+        slug = form.title.data.lower().replace(' ', '-')
+        
+        post = Post(
+            title=form.title.data,
+            slug=slug,
+            content=form.content.data,
+            category_id=form.category.data,
+            user_id=session['user_id'],
+            published=form.published.data
+        )
+        
+        # Handle tags
+        if form.tags.data:
+            tag_names = [tag.strip() for tag in form.tags.data.split(',')]
+            for tag_name in tag_names:
+                tag = Tag.query.filter_by(name=tag_name).first()
+                if not tag:
+                    tag = Tag(name=tag_name)
+                    db.session.add(tag)
+                post.tags.append(tag)
+        
+        db.session.add(post)
+        db.session.commit()
+        
+        flash('Post created successfully!', 'success')
+        return redirect(url_for('post_detail', slug=post.slug))
+    
+    return render_template('create_post.html', form=form)</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-7" style="display: none;">
+                            <h2>Lesson 7: RESTful APIs</h2>
+                            <p>Build powerful REST APIs with Flask to serve data to web and mobile applications.</p>
+                            
+                            <h3>Creating REST Endpoints</h3>
+                            <p>REST APIs provide a standardized way to expose your application's data and functionality.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Basic REST API</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask, jsonify, request
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///api.db'
+db = SQLAlchemy(app)
+
+# API Models
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'username': self.username,
+            'email': self.email,
+            'created_at': self.created_at.isoformat()
+        }
+
+# API Routes
+@app.route('/api/users', methods=['GET'])
+def get_users():
+    users = User.query.all()
+    return jsonify([user.to_dict() for user in users])
+
+@app.route('/api/users', methods=['POST'])
+def create_user():
+    data = request.get_json()
+    
+    if not data or not data.get('username') or not data.get('email'):
+        return jsonify({'error': 'Username and email are required'}), 400
+    
+    user = User(username=data['username'], email=data['email'])
+    db.session.add(user)
+    db.session.commit()
+    
+    return jsonify(user.to_dict()), 201</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-8" style="display: none;">
+                            <h2>Lesson 8: JSON and Data Handling</h2>
+                            <p>Master data serialization, validation, and JSON API best practices.</p>
+                            
+                            <h3>Data Serialization with Marshmallow</h3>
+                            <p>Marshmallow provides powerful serialization and validation for your APIs.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Creating Schemas</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask, jsonify, request
+from flask_marshmallow import Marshmallow
+from marshmallow import fields, validate, ValidationError
+
+app = Flask(__name__)
+ma = Marshmallow(app)
+
+# Schemas
+class UserSchema(ma.SQLAlchemyAutoSchema):
+    class Meta:
+        model = User
+        load_instance = True
+    
+    username = fields.Str(required=True, validate=validate.Length(min=3, max=80))
+    email = fields.Email(required=True)
+
+user_schema = UserSchema()
+
+@app.route('/api/users', methods=['POST'])
+def create_user():
+    try:
+        user_data = user_schema.load(request.json)
+    except ValidationError as err:
+        return jsonify({'errors': err.messages}), 400
+    
+    user = User(**user_data)
+    db.session.add(user)
+    db.session.commit()
+    
+    return user_schema.jsonify(user), 201</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-9" style="display: none;">
+                            <h2>Lesson 9: Authentication & Security</h2>
+                            <p>Implement secure user authentication, authorization, and protect your Flask applications.</p>
+                            
+                            <h3>JWT Authentication</h3>
+                            <p>JSON Web Tokens provide a secure way to handle user authentication in APIs.</p>
+
+                            <div class="code-example">
+                                <h4>Example: JWT Authentication</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>from flask import Flask, request, jsonify
+from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
+import jwt
+import datetime
+
+app = Flask(__name__)
+app.config['JWT_SECRET_KEY'] = 'your-secret-key'
+
+def token_required(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        token = request.headers.get('Authorization')
+        
+        if not token:
+            return jsonify({'message': 'Token is missing'}), 401
+        
+        if token.startswith('Bearer '):
+            token = token[7:]
+        
+        try:
+            data = jwt.decode(token, app.config['JWT_SECRET_KEY'], algorithms=['HS256'])
+            current_user = User.query.get(data['user_id'])
+        except:
+            return jsonify({'message': 'Token is invalid'}), 401
+        
+        return f(current_user, *args, **kwargs)
+    
+    return decorated
+
+@app.route('/api/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    
+    user = User.query.filter_by(username=data['username']).first()
+    
+    if user and check_password_hash(user.password_hash, data['password']):
+        token = jwt.encode({
+            'user_id': user.id,
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=24)
+        }, app.config['JWT_SECRET_KEY'])
+        
+        return jsonify({'token': token})
+    
+    return jsonify({'message': 'Invalid credentials'}), 401
+
+@app.route('/api/profile', methods=['GET'])
+@token_required
+def get_profile(current_user):
+    return jsonify(current_user.to_dict())</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-10" style="display: none;">
+                            <h2>Lesson 10: Testing Flask Apps</h2>
+                            <p>Write comprehensive tests for your Flask applications to ensure reliability and maintainability.</p>
+                            
+                            <h3>Setting Up Testing Environment</h3>
+                            <p>Testing is crucial for building robust applications. Flask provides excellent testing support.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Basic Testing Setup</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># test_app.py
+import pytest
+from app import create_app, db
+from models import User
+
+@pytest.fixture
+def app():
+    app = create_app()
+    app.config['TESTING'] = True
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
+    
+    with app.app_context():
+        db.create_all()
+        yield app
+        db.drop_all()
+
+@pytest.fixture
+def client(app):
+    return app.test_client()
+
+def test_register_user(client):
+    response = client.post('/api/register', 
+                          json={
+                              'username': 'testuser',
+                              'email': 'test@example.com',
+                              'password': 'testpass123'
+                          })
+    
+    assert response.status_code == 201
+    assert b'User created successfully' in response.data
+
+def test_login_user(client):
+    # First create a user
+    client.post('/api/register', 
+                json={
+                    'username': 'testuser',
+                    'email': 'test@example.com',
+                    'password': 'testpass123'
+                })
+    
+    # Then login
+    response = client.post('/api/login',
+                          json={
+                              'username': 'testuser',
+                              'password': 'testpass123'
+                          })
+    
+    assert response.status_code == 200
+    assert 'token' in response.get_json()
+
+# Run tests with: pytest test_app.py</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-11" style="display: none;">
+                            <h2>Lesson 11: Deployment Strategies</h2>
+                            <p>Learn how to deploy your Flask applications to production environments.</p>
+                            
+                            <h3>Deployment with Gunicorn and Nginx</h3>
+                            <p>Deploy your Flask app using Gunicorn as the WSGI server and Nginx as a reverse proxy.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Production Deployment</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Bash</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Install production dependencies
+pip install gunicorn
+
+# Create requirements.txt
+pip freeze > requirements.txt
+
+# Create Gunicorn configuration
+# gunicorn.conf.py
+bind = "0.0.0.0:8000"
+workers = 4
+worker_class = "sync"
+timeout = 30
+keepalive = 2
+max_requests = 1000
+max_requests_jitter = 50
+
+# Run with Gunicorn
+gunicorn -c gunicorn.conf.py app:app
+
+# Nginx configuration
+# /etc/nginx/sites-available/myapp
+server {
+    listen 80;
+    server_name yourdomain.com;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Environment Configuration</h3>
+                            <div class="code-example">
+                                <h4>Example: Production Configuration</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># config.py
+import os
+
+class Config:
+    SECRET_KEY = os.environ.get('SECRET_KEY') or 'dev-secret-key'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///app.db'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+class ProductionConfig(Config):
+    DEBUG = False
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    
+class DevelopmentConfig(Config):
+    DEBUG = True
+
+# .env file for production
+SECRET_KEY=your-production-secret-key
+DATABASE_URL=postgresql://user:password@localhost/dbname
+FLASK_ENV=production
+
+# Dockerfile
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["gunicorn", "-c", "gunicorn.conf.py", "app:app"]</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-12" style="display: none;">
+                            <h2>Lesson 12: Advanced Features</h2>
+                            <p>Explore advanced Flask features and best practices for building scalable web applications.</p>
+                            
+                            <h3>Blueprints for Application Structure</h3>
+                            <p>Organize large Flask applications using blueprints for better modularity.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Application with Blueprints</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># app/__init__.py
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
+
+def create_app():
+    app = Flask(__name__)
+    app.config.from_object('config.Config')
+    
+    db.init_app(app)
+    
+    # Register blueprints
+    from app.auth import bp as auth_bp
+    app.register_blueprint(auth_bp, url_prefix='/auth')
+    
+    from app.api import bp as api_bp
+    app.register_blueprint(api_bp, url_prefix='/api')
+    
+    from app.main import bp as main_bp
+    app.register_blueprint(main_bp)
+    
+    return app
+
+# app/auth/routes.py
+from flask import Blueprint, request, jsonify
+from app.models import User
+from app import db
+
+bp = Blueprint('auth', __name__)
+
+@bp.route('/register', methods=['POST'])
+def register():
+    data = request.get_json()
+    
+    user = User(username=data['username'], email=data['email'])
+    user.set_password(data['password'])
+    
+    db.session.add(user)
+    db.session.commit()
+    
+    return jsonify({'message': 'User created successfully'}), 201
+
+# app/api/routes.py
+from flask import Blueprint, jsonify
+from app.models import User
+
+bp = Blueprint('api', __name__)
+
+@bp.route('/users')
+def get_users():
+    users = User.query.all()
+    return jsonify([user.to_dict() for user in users])</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Caching and Performance</h3>
+                            <div class="code-example">
+                                <h4>Example: Flask-Caching</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Install Flask-Caching
+# pip install Flask-Caching
+
+from flask import Flask
+from flask_caching import Cache
+
+app = Flask(__name__)
+app.config['CACHE_TYPE'] = 'redis'
+app.config['CACHE_REDIS_URL'] = 'redis://localhost:6379'
+
+cache = Cache(app)
+
+@app.route('/api/posts')
+@cache.cached(timeout=300)  # Cache for 5 minutes
+def get_posts():
+    posts = Post.query.all()
+    return jsonify([post.to_dict() for post in posts])
+
+@app.route('/api/stats')
+@cache.memoize(timeout=600)  # Cache with parameters
+def get_user_stats(user_id):
+    user = User.query.get_or_404(user_id)
+    stats = {
+        'post_count': len(user.posts),
+        'comment_count': len(user.comments),
+        'join_date': user.created_at.isoformat()
+    }
+    return jsonify(stats)</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="practice-section">
+                                <h3>Course Complete! 🎉</h3>
+                                <p>Congratulations! You've completed the Python Web Development course. You now have the skills to build full-stack web applications with Flask!</p>
+                                
+                                <div class="concept-grid">
+                                    <div class="concept-card">
+                                        <h4>What You've Mastered</h4>
+                                        <p>Flask, databases, APIs, authentication, testing, and deployment!</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>Next Steps</h4>
+                                        <p>Build your own web applications, explore Django, or learn frontend frameworks!</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" disabled>Course Complete! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Env Open Education</h3>
+                    <p>Learn to code with hands-on projects and expert guidance.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@envopenEducation.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Env Open. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/course.js"></script>
+</body>
+</html>

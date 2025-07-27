@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Development Course - Env Open Education</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Env Open Education</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="python-course.html" class="nav-link">Python</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript-course.html" class="nav-link active">JavaScript</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="course-hero">
+            <div class="container">
+                <div class="course-hero-content">
+                    <div class="course-info">
+                        <div class="course-icon-large">📜</div>
+                        <h1>JavaScript Development Course</h1>
+                        <p>Master JavaScript and build dynamic web applications from fundamentals to advanced concepts.</p>
+                        <div class="course-meta">
+                            <span class="meta-item">📚 6 Lessons</span>
+                            <span class="meta-item">🚀 Hands-on Examples</span>
+                            <span class="meta-item">⏱️ 2-3 Hours</span>
+                            <span class="meta-item">🌐 Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    <div class="course-sidebar">
+                        <div class="progress-card">
+                            <h3>Your Progress</h3>
+                            <div class="progress-circle">
+                                <span class="progress-text">0%</span>
+                            </div>
+                            <p>0 of 6 lessons completed</p>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <h3>Course Modules</h3>
+                            <div class="module-list">
+                                <div class="module-item active">
+                                    <h4>Module 1: JavaScript Fundamentals</h4>
+                                    <ul class="lesson-list">
+                                        <li class="lesson-item active"><a href="#lesson-1">Introduction to JavaScript</a></li>
+                                        <li class="lesson-item"><a href="#lesson-2">Data Types and Operators</a></li>
+                                        <li class="lesson-item"><a href="#lesson-3">Control Flow</a></li>
+                                        <li class="lesson-item"><a href="#lesson-4">Functions</a></li>
+                                        <li class="lesson-item"><a href="#lesson-5">DOM Manipulation</a></li>
+                                        <li class="lesson-item"><a href="#lesson-6">Events and Event Handling</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-main">
+                        <div class="lesson-content" id="lesson-1">
+                            <h2>Lesson 1: Introduction to JavaScript</h2>
+                            <p>Welcome to JavaScript! JavaScript is the programming language of the web, enabling interactive and dynamic websites.</p>
+                            
+                            <h3>What is JavaScript?</h3>
+                            <p>JavaScript is a versatile programming language that runs in web browsers and on servers. It's essential for modern web development and can create everything from simple interactive elements to complex web applications.</p>
+
+                            <h3>Your First JavaScript Program</h3>
+                            <p>Let's start with a simple example that shows JavaScript in action. We'll create an interactive button that responds to user clicks.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Interactive Button</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">HTML/JavaScript</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Interactive Button Example&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f0f4f8;
+        }
+        
+        .my-button {
+            background-color: #2563eb;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;My First Interactive Button&lt;/h1&gt;
+    &lt;p&gt;Click the button below to see JavaScript in action!&lt;/p&gt;
+    
+    &lt;button id="myButton" class="my-button"&gt;Click Me!&lt;/button&gt;
+    
+    &lt;script&gt;
+        // Get the button element
+        const button = document.getElementById('myButton');
+        
+        // Add event listener for click
+        button.addEventListener('click', function() {
+            alert('Hello! You just clicked your first JavaScript button!');
+            console.log('Button was clicked!');
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                </div>
+                                <div class="run-instructions">
+                                    <p><strong>💡 How to run this code:</strong></p>
+                                    <ol>
+                                        <li>Copy the code above</li>
+                                        <li>Save it as <code>interactive-button.html</code></li>
+                                        <li>Open the file in any web browser</li>
+                                        <li>Click the button and see the alert message!</li>
+                                        <li>Press F12 to open Developer Tools and see the console output</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="explanation">
+                                <h4>Code Explanation:</h4>
+                                <ul>
+                                    <li><code>document.getElementById()</code> selects an HTML element by its ID</li>
+                                    <li><code>addEventListener()</code> listens for events like clicks</li>
+                                    <li><code>alert()</code> displays a popup message to the user</li>
+                                    <li>JavaScript makes the web page interactive and responsive</li>
+                                </ul>
+                            </div>
+
+                            <div class="practice-section">
+                                <h3>Variables and Console Output</h3>
+                                <p>JavaScript uses variables to store data. Let's explore different ways to create variables and display information.</p>
+                                
+                                <div class="code-playground">
+                                    <h4>Practice: Variables and Output</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">HTML/JavaScript</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;JavaScript Variables Practice&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8fafc;
+        }
+        
+        .output {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+            border-left: 4px solid #2563eb;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;JavaScript Variables and Output&lt;/h1&gt;
+    &lt;div id="output" class="output"&gt;&lt;/div&gt;
+    
+    &lt;script&gt;
+        // Different ways to create variables
+        let name = "Env Open Education Student";
+        const age = 25;
+        var city = "Your City";
+        
+        // Boolean and number variables
+        let isLearning = true;
+        let favoriteNumber = 42;
+        
+        // Display information in the webpage
+        const outputDiv = document.getElementById('output');
+        
+        outputDiv.innerHTML = `
+            &lt;h2&gt;Variable Examples:&lt;/h2&gt;
+            &lt;p&gt;&lt;strong&gt;Name:&lt;/strong&gt; ${name}&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Age:&lt;/strong&gt; ${age}&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;City:&lt;/strong&gt; ${city}&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Currently Learning:&lt;/strong&gt; ${isLearning}&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Favorite Number:&lt;/strong&gt; ${favoriteNumber}&lt;/p&gt;
+        `;
+        
+        // Also log to console (open browser dev tools to see)
+        console.log("Name:", name);
+        console.log("Age:", age);
+        console.log("City:", city);
+        console.log("Is Learning:", isLearning);
+        console.log("Favorite Number:", favoriteNumber);
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                    <div class="exercise-instructions">
+                                        <p><strong>🎯 Practice Exercise:</strong></p>
+                                        <ul>
+                                            <li>Copy this code and save as <code>variables-practice.html</code></li>
+                                            <li>Change the variable values to your own information</li>
+                                            <li>Add 2 more variables (like hobby, school, etc.)</li>
+                                            <li>Update the HTML template to display your new variables</li>
+                                            <li>Open in browser and check the console (F12)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="key-concepts">
+                                <h3>Key Concepts</h3>
+                                <div class="concept-grid">
+                                    <div class="concept-card">
+                                        <h4>Variables</h4>
+                                        <p>Store data using let, const, or var keywords.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>Functions</h4>
+                                        <p>Reusable blocks of code that perform specific tasks.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>DOM</h4>
+                                        <p>Document Object Model - how JavaScript interacts with HTML.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>Events</h4>
+                                        <p>User interactions like clicks, typing, or mouse movements.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mini-project">
+                                <h3>Mini Project: Personal Greeting Page</h3>
+                                <p>Create an interactive webpage that asks for the user's name and displays a personalized greeting with the current time.</p>
+                                
+                                <div class="project-playground">
+                                    <h4>Mini Project: Personal Greeting Page</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">HTML/JavaScript</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Personal Greeting Page&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+        }
+        
+        input {
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            margin: 10px;
+            width: 200px;
+        }
+        
+        button {
+            background-color: #10b981;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        
+        #greeting {
+            margin-top: 30px;
+            font-size: 20px;
+            min-height: 100px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Personal Greeting Generator&lt;/h1&gt;
+        &lt;p&gt;Enter your name to receive a personalized greeting!&lt;/p&gt;
+        
+        &lt;input type="text" id="nameInput" placeholder="Enter your name"&gt;
+        &lt;br&gt;
+        &lt;button onclick="generateGreeting()"&gt;Generate Greeting&lt;/button&gt;
+        
+        &lt;div id="greeting"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;script&gt;
+        function generateGreeting() {
+            // Get the user's name
+            const nameInput = document.getElementById('nameInput');
+            const name = nameInput.value.trim();
+            
+            // Get the greeting div
+            const greetingDiv = document.getElementById('greeting');
+            
+            // Check if name was entered
+            if (name === '') {
+                greetingDiv.innerHTML = '&lt;p style="color: #fbbf24;"&gt;Please enter your name first!&lt;/p&gt;';
+                return;
+            }
+            
+            // Get current time
+            const now = new Date();
+            const hours = now.getHours();
+            const timeOfDay = hours &lt; 12 ? 'morning' : hours &lt; 18 ? 'afternoon' : 'evening';
+            
+            // Create personalized greeting
+            const greetings = [
+                `Hello ${name}! Welcome to JavaScript programming!`,
+                `Great to meet you, ${name}! Ready to learn some code?`,
+                `Hi there, ${name}! Let's build something amazing together!`,
+                `Welcome ${name}! Your coding journey starts here!`
+            ];
+            
+            const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+            
+            greetingDiv.innerHTML = `
+                &lt;h2&gt;${randomGreeting}&lt;/h2&gt;
+                &lt;p&gt;Good ${timeOfDay}! The current time is ${now.toLocaleTimeString()}&lt;/p&gt;
+                &lt;p&gt;Today's date: ${now.toLocaleDateString()}&lt;/p&gt;
+                &lt;p&gt;🎉 Happy coding, ${name}! 🎉&lt;/p&gt;
+            `;
+        }
+        
+        // Allow Enter key to trigger greeting
+        document.getElementById('nameInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                generateGreeting();
+            }
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                    <div class="project-instructions">
+                                        <p><strong>🚀 Mini Project Challenge:</strong></p>
+                                        <ul>
+                                            <li>Copy this code and save as <code>greeting-page.html</code></li>
+                                            <li>Add an age input field and use it in the greeting</li>
+                                            <li>Add more personalized greetings to the array</li>
+                                            <li>Change the colors and styling to your preference</li>
+                                            <li>Add a "Clear" button to reset the greeting</li>
+                                            <li><strong>Bonus:</strong> Add more interactive features!</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="advanced-example">
+                                <h3>Advanced Example: Color Changer</h3>
+                                <p>Here's a more complex example showing how JavaScript can dynamically change webpage styling:</p>
+                                
+                                <div class="advanced-playground">
+                                    <h4>Advanced Example: Color Changer</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">HTML/JavaScript</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Dynamic Color Changer&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            transition: all 0.5s ease;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 15px;
+            transition: all 0.5s ease;
+        }
+        
+        .color-button {
+            padding: 15px 25px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;🎨 Dynamic Color Changer&lt;/h1&gt;
+        &lt;p&gt;Click the buttons below to change the page colors!&lt;/p&gt;
+        
+        &lt;div class="info-box"&gt;
+            &lt;div id="colorInfo"&gt;Current theme: Default&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;button class="color-button" style="background-color: #3b82f6;" onclick="changeTheme('blue')"&gt;
+            Ocean Blue
+        &lt;/button&gt;
+        
+        &lt;button class="color-button" style="background-color: #10b981;" onclick="changeTheme('green')"&gt;
+            Forest Green
+        &lt;/button&gt;
+        
+        &lt;button class="color-button" style="background-color: #f59e0b;" onclick="changeTheme('orange')"&gt;
+            Sunset Orange
+        &lt;/button&gt;
+        
+        &lt;button class="color-button" style="background-color: #8b5cf6;" onclick="changeTheme('purple')"&gt;
+            Royal Purple
+        &lt;/button&gt;
+        
+        &lt;button class="color-button" style="background-color: #6b7280;" onclick="changeTheme('default')"&gt;
+            Reset to Default
+        &lt;/button&gt;
+        
+        &lt;div class="info-box"&gt;
+            &lt;h3&gt;🔥 JavaScript in Action!&lt;/h3&gt;
+            &lt;p&gt;This demonstrates how JavaScript can dynamically change:&lt;/p&gt;
+            &lt;ul style="text-align: left; display: inline-block;"&gt;
+                &lt;li&gt;Background colors and gradients&lt;/li&gt;
+                &lt;li&gt;Text colors&lt;/li&gt;
+                &lt;li&gt;Element styling&lt;/li&gt;
+                &lt;li&gt;Content updates&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;script&gt;
+        const themes = {
+            blue: {
+                background: 'linear-gradient(135deg, #3b82f6, #1e40af)',
+                textColor: 'white',
+                name: 'Ocean Blue'
+            },
+            green: {
+                background: 'linear-gradient(135deg, #10b981, #047857)',
+                textColor: 'white',
+                name: 'Forest Green'
+            },
+            orange: {
+                background: 'linear-gradient(135deg, #f59e0b, #d97706)',
+                textColor: 'white',
+                name: 'Sunset Orange'
+            },
+            purple: {
+                background: 'linear-gradient(135deg, #8b5cf6, #7c3aed)',
+                textColor: 'white',
+                name: 'Royal Purple'
+            },
+            default: {
+                background: 'linear-gradient(135deg, #f1f5f9, #e2e8f0)',
+                textColor: '#334155',
+                name: 'Default'
+            }
+        };
+        
+        function changeTheme(themeName) {
+            const theme = themes[themeName];
+            const body = document.body;
+            const colorInfo = document.getElementById('colorInfo');
+            
+            // Change background
+            body.style.background = theme.background;
+            body.style.color = theme.textColor;
+            
+            // Update info text
+            colorInfo.textContent = `Current theme: ${theme.name}`;
+            
+            // Log to console
+            console.log(`Theme changed to: ${theme.name}`);
+        }
+        
+        // Set default theme on load
+        changeTheme('default');
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                    <div class="project-instructions">
+                                        <p><strong>🚀 Advanced Challenge:</strong></p>
+                                        <ul>
+                                            <li>Copy this code and save as <code>color-changer.html</code></li>
+                                            <li>Add 2 more color themes with your favorite colors</li>
+                                            <li>Add a "Random Theme" button that picks a random color</li>
+                                            <li>Add smooth transition animations</li>
+                                            <li>Save the user's theme preference in localStorage</li>
+                                            <li><strong>Bonus:</strong> Add a custom color picker!</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" disabled>← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-2" style="display: none;">
+                            <h2>Lesson 2: Data Types and Operators</h2>
+                            <p>Explore JavaScript's data types and learn how to work with different operators.</p>
+                            
+                            <h3>JavaScript Data Types</h3>
+                            <p>JavaScript has several built-in data types that you'll use regularly.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Data Types</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">JavaScript</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>// Number type
+let age = 25;
+let price = 99.99;
+let temperature = -10;
+
+// String type
+let name = "JavaScript";
+let message = 'Hello, World!';
+let template = `Welcome, ${name}!`;
+
+// Boolean type
+let isActive = true;
+let isComplete = false;
+
+// Null and Undefined
+let data = null;
+let result; // undefined
+
+// Array
+let numbers = [1, 2, 3, 4, 5];
+let fruits = ["apple", "banana", "orange"];
+
+// Object
+let person = {
+    name: "Alice",
+    age: 30,
+    city: "New York"
+};
+
+console.log("Type of age:", typeof age);
+console.log("Type of name:", typeof name);
+console.log("Type of person:", typeof person);</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Operators</h3>
+                            <div class="code-example">
+                                <h4>Example: JavaScript Operators</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">JavaScript</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>// Arithmetic operators
+let a = 10;
+let b = 3;
+
+console.log("Addition:", a + b);        // 13
+console.log("Subtraction:", a - b);     // 7
+console.log("Multiplication:", a * b);  // 30
+console.log("Division:", a / b);        // 3.333...
+console.log("Remainder:", a % b);       // 1
+console.log("Exponentiation:", a ** b); // 1000
+
+// Comparison operators
+console.log("Equal:", a == b);          // false
+console.log("Strict equal:", a === b);  // false
+console.log("Not equal:", a != b);      // true
+console.log("Greater than:", a > b);    // true
+
+// Logical operators
+let x = true;
+let y = false;
+
+console.log("AND:", x && y);  // false
+console.log("OR:", x || y);   // true
+console.log("NOT:", !x);      // false</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-3" style="display: none;">
+                            <h2>Lesson 3: Control Flow</h2>
+                            <p>Learn how to control the flow of your program with conditionals and loops.</p>
+                            
+                            <h3>Conditional Statements</h3>
+                            <p>Use if, else if, and else statements to make decisions in your code.</p>
+
+                            <div class="code-example">
+                                <h4>Example: If Statements</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">JavaScript</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>// Basic if statement
+let score = 85;
+
+if (score >= 90) {
+    console.log("Grade: A");
+} else if (score >= 80) {
+    console.log("Grade: B");
+} else if (score >= 70) {
+    console.log("Grade: C");
+} else if (score >= 60) {
+    console.log("Grade: D");
+} else {
+    console.log("Grade: F");
+}
+
+// Switch statement
+let day = "Monday";
+
+switch (day) {
+    case "Monday":
+        console.log("Start of the work week!");
+        break;
+    case "Friday":
+        console.log("TGIF!");
+        break;
+    case "Saturday":
+    case "Sunday":
+        console.log("Weekend!");
+        break;
+    default:
+        console.log("Regular day");
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Loops</h3>
+                            <div class="code-example">
+                                <h4>Example: JavaScript Loops</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">JavaScript</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>// For loop
+for (let i = 0; i < 5; i++) {
+    console.log("For loop:", i);
+}
+
+// While loop
+let count = 0;
+while (count < 3) {
+    console.log("While loop:", count);
+    count++;
+}
+
+// For...of loop (arrays)
+let fruits = ["apple", "banana", "orange"];
+for (let fruit of fruits) {
+    console.log("Fruit:", fruit);
+}
+
+// For...in loop (objects)
+let person = {name: "Alice", age: 30, city: "NYC"};
+for (let key in person) {
+    console.log(`${key}: ${person[key]}`);
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-4" style="display: none;">
+                            <h2>Lesson 4: Functions</h2>
+                            <p>Master JavaScript functions, from basic declarations to advanced arrow functions.</p>
+                            
+                            <h3>Function Declarations</h3>
+                            <p>Functions are reusable blocks of code that perform specific tasks.</p>
+
+                            <div class="code-example">
+                                <h4>Example: JavaScript Functions</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">JavaScript</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>// Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+// Function expression
+const add = function(a, b) {
+    return a + b;
+};
+
+// Arrow function
+const multiply = (a, b) => a * b;
+
+// Arrow function with block body
+const divide = (a, b) => {
+    if (b === 0) {
+        return "Cannot divide by zero";
+    }
+    return a / b;
+};
+
+// Using functions
+console.log(greet("JavaScript"));
+console.log(add(5, 3));
+console.log(multiply(4, 7));
+console.log(divide(10, 2));
+
+// Function with default parameters
+function createProfile(name, age = 25, city = "Unknown") {
+    return {
+        name: name,
+        age: age,
+        city: city
+    };
+}
+
+console.log(createProfile("Alice"));
+console.log(createProfile("Bob", 30, "London"));</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-5" style="display: none;">
+                            <h2>Lesson 5: DOM Manipulation</h2>
+                            <p>Learn how to interact with HTML elements using JavaScript's DOM API.</p>
+                            
+                            <h3>Selecting Elements</h3>
+                            <p>The DOM (Document Object Model) allows you to interact with HTML elements.</p>
+
+                            <div class="code-example">
+                                <h4>Example: DOM Selection</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">JavaScript</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>// Selecting elements
+const title = document.getElementById('main-title');
+const buttons = document.getElementsByClassName('btn');
+const paragraphs = document.getElementsByTagName('p');
+
+// Modern selectors (recommended)
+const firstButton = document.querySelector('.btn');
+const allButtons = document.querySelectorAll('.btn');
+
+// Modifying content
+if (title) {
+    title.textContent = "Welcome to JavaScript!";
+    title.innerHTML = "<em>Welcome to JavaScript!</em>";
+}
+
+// Changing styles
+const element = document.querySelector('.highlight');
+if (element) {
+    element.style.color = 'blue';
+    element.style.backgroundColor = 'yellow';
+    element.style.fontSize = '20px';
+}
+
+// Adding/removing classes
+element.classList.add('active');
+element.classList.remove('inactive');
+element.classList.toggle('visible');</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Creating and Modifying Elements</h3>
+                            <div class="code-example">
+                                <h4>Example: Creating Elements</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">JavaScript</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>// Creating new elements
+const newParagraph = document.createElement('p');
+newParagraph.textContent = 'This is a new paragraph!';
+newParagraph.className = 'dynamic-content';
+
+// Adding elements to the page
+const container = document.querySelector('#content');
+if (container) {
+    container.appendChild(newParagraph);
+}
+
+// Creating a list dynamically
+const fruits = ['Apple', 'Banana', 'Orange'];
+const list = document.createElement('ul');
+
+fruits.forEach(fruit => {
+    const listItem = document.createElement('li');
+    listItem.textContent = fruit;
+    list.appendChild(listItem);
+});
+
+// Add the list to the page
+if (container) {
+    container.appendChild(list);
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-6" style="display: none;">
+                            <h2>Lesson 6: Events and Event Handling</h2>
+                            <p>Learn how to handle user interactions and create interactive web applications.</p>
+                            
+                            <h3>Event Listeners</h3>
+                            <p>Events allow your JavaScript to respond to user actions like clicks, form submissions, and keyboard input.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Event Handling</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">JavaScript</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code>// Click event
+const button = document.querySelector('#my-button');
+if (button) {
+    button.addEventListener('click', function(event) {
+        alert('Button clicked!');
+        console.log('Event object:', event);
+    });
+}
+
+// Multiple event types
+const input = document.querySelector('#text-input');
+if (input) {
+    input.addEventListener('focus', () => {
+        console.log('Input focused');
+    });
+    
+    input.addEventListener('blur', () => {
+        console.log('Input lost focus');
+    });
+    
+    input.addEventListener('keyup', (event) => {
+        console.log('Key pressed:', event.key);
+        console.log('Current value:', event.target.value);
+    });
+}
+
+// Form submission
+const form = document.querySelector('#contact-form');
+if (form) {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        const formData = new FormData(form);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        
+        console.log('Form submitted:', { name, email });
+    });
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="practice-section">
+                                <h3>Course Complete! 🎉</h3>
+                                <p>Congratulations! You've completed the JavaScript fundamentals course. You're now ready to build interactive web applications!</p>
+                                
+                                <div class="concept-grid">
+                                    <div class="concept-card">
+                                        <h4>What You've Mastered</h4>
+                                        <p>Variables, functions, DOM manipulation, events, and more!</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>Next Steps</h4>
+                                        <p>Build projects, learn frameworks, or explore advanced JavaScript concepts.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" disabled>Course Complete! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-resources">
+            <div class="container">
+                <h2>JavaScript Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>📖 MDN Documentation</h3>
+                        <p>Comprehensive JavaScript reference and tutorials from Mozilla.</p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" class="btn btn-outline">Visit MDN</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>🏗️ Project Ideas</h3>
+                        <p>Inspiring project ideas to practice your JavaScript skills.</p>
+                        <a href="#" class="btn btn-outline">View Projects</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>🛠️ Developer Tools</h3>
+                        <p>Learn to use browser developer tools for debugging.</p>
+                        <a href="#" class="btn btn-outline">Learn Tools</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>🌐 Web APIs</h3>
+                        <p>Explore browser APIs for advanced web development.</p>
+                        <a href="#" class="btn btn-outline">Explore APIs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Env Open Education</h3>
+                    <p>Empowering the next generation of programmers through interactive, hands-on learning experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="python-course.html">Python Programming</a></li>
+                        <li><a href="javascript-course.html">JavaScript Development</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Env Open. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/course.js"></script>
+</body>
+</html>

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Course - Env Open Education</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Env Open Education</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="python-course.html" class="nav-link active">Python</a>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript-course.html" class="nav-link">JavaScript</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="course-hero">
+            <div class="container">
+                <div class="course-hero-content">
+                    <div class="course-info">
+                        <div class="course-icon-large">🐍</div>
+                        <h1>Python Programming Course</h1>
+                        <p>Master Python from basics to advanced concepts with hands-on projects and interactive coding exercises.</p>
+                        <div class="course-meta">
+                            <span class="meta-item">📚 25+ Lessons</span>
+                            <span class="meta-item">🚀 10+ Projects</span>
+                            <span class="meta-item">⏱️ 8 Weeks</span>
+                            <span class="meta-item">👨‍💻 Beginner Friendly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-content">
+            <div class="container">
+                <div class="course-layout">
+                    <div class="course-sidebar">
+                        <div class="progress-card">
+                            <h3>Your Progress</h3>
+                            <div class="progress-circle">
+                                <span class="progress-text">0%</span>
+                            </div>
+                            <p>0 of 25 lessons completed</p>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <h3>Course Modules</h3>
+                            <div class="module-list">
+                                <div class="module-item active">
+                                    <h4>Module 1: Python Basics</h4>
+                                    <ul class="lesson-list">
+                                        <li class="lesson-item active"><a href="#lesson-1">Getting Started with Python</a></li>
+                                        <li class="lesson-item"><a href="#lesson-2">Variables and Data Types</a></li>
+                                        <li class="lesson-item"><a href="#lesson-3">Basic Operations</a></li>
+                                        <li class="lesson-item"><a href="#lesson-4">Input and Output</a></li>
+                                    </ul>
+                                </div>
+                                <div class="module-item">
+                                    <h4>Module 2: Control Structures</h4>
+                                    <ul class="lesson-list">
+                                        <li class="lesson-item"><a href="#lesson-5">Conditional Statements</a></li>
+                                        <li class="lesson-item"><a href="#lesson-6">Loops</a></li>
+                                        <li class="lesson-item"><a href="#lesson-7">Error Handling</a></li>
+                                    </ul>
+                                </div>
+                                <div class="module-item">
+                                    <h4>Module 3: Data Structures</h4>
+                                    <ul class="lesson-list">
+                                        <li class="lesson-item"><a href="#lesson-8">Lists and Tuples</a></li>
+                                        <li class="lesson-item"><a href="#lesson-9">Dictionaries and Sets</a></li>
+                                        <li class="lesson-item"><a href="#lesson-10">Working with Strings</a></li>
+                                    </ul>
+                                </div>
+                                <div class="module-item">
+                                    <h4>Module 4: Functions</h4>
+                                    <ul class="lesson-list">
+                                        <li class="lesson-item"><a href="#lesson-11">Defining Functions</a></li>
+                                        <li class="lesson-item"><a href="#lesson-12">Parameters and Arguments</a></li>
+                                        <li class="lesson-item"><a href="#lesson-13">Lambda Functions</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-main">
+                        <div class="lesson-content" id="lesson-1">
+                            <h2>Lesson 1: Getting Started with Python</h2>
+                            <p>Welcome to your first Python lesson! Python is a powerful, easy-to-learn programming language that's perfect for beginners and professionals alike.</p>
+                            
+                            <h3>What is Python?</h3>
+                            <p>Python is a high-level programming language known for its simple syntax and readability. It's used for web development, data analysis, artificial intelligence, automation, and much more.</p>
+
+                            <h3>Your First Python Program</h3>
+                            <p>Let's start with the traditional "Hello, World!" program. This simple program demonstrates the basic syntax of Python.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Hello World</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Your first Python program
+print("Hello, World!")
+print("Welcome to Python programming!")
+print("This is your first step into coding.")
+
+# You can change this message to anything you want
+print("I'm learning Python with Env Open Education!")</code></pre>
+                                </div>
+                                <div class="run-instructions">
+                                    <p><strong>💡 How to run this code:</strong></p>
+                                    <ol>
+                                        <li>Copy the code above</li>
+                                        <li>Open your Python editor (IDLE, VS Code, PyCharm, or any text editor)</li>
+                                        <li>Paste the code and save as <code>hello_world.py</code></li>
+                                        <li>Run the program and see the output!</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="explanation">
+                                <h4>Code Explanation:</h4>
+                                <ul>
+                                    <li><code>print()</code> is a built-in function that displays text on the screen</li>
+                                    <li>The text inside quotes is called a string</li>
+                                    <li>Python automatically handles the output formatting</li>
+                                </ul>
+                            </div>
+
+                            <div class="practice-section">
+                                <h3>Practice Exercise</h3>
+                                <p>Try modifying the code above to print your own message. You can change the text inside the quotes to anything you want!</p>
+                                
+                                <div class="code-playground">
+                                    <h4>Your Turn - Try It Out!</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">Python</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code># Practice Exercise: Print Your Own Messages
+# Try changing these messages to something about yourself
+
+print("Hello! My name is [Your Name]")
+print("I am learning Python programming")
+print("This is my first coding exercise!")
+
+# Add more print statements below:
+# print("I live in [Your City]")
+# print("My favorite hobby is [Your Hobby]")
+# print("I want to learn Python because [Your Reason]")
+
+# Experiment with different messages!</code></pre>
+                                    </div>
+                                    <div class="exercise-instructions">
+                                        <p><strong>🎯 Practice Exercise:</strong></p>
+                                        <ul>
+                                            <li>Copy this code to your Python editor</li>
+                                            <li>Replace [Your Name], [Your City], etc. with your own information</li>
+                                            <li>Uncomment the lines by removing the # symbol</li>
+                                            <li>Add your own print statements</li>
+                                            <li>Run the program and see your personalized output!</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="key-concepts">
+                                <h3>Key Concepts</h3>
+                                <div class="concept-grid">
+                                    <div class="concept-card">
+                                        <h4>Syntax</h4>
+                                        <p>Python uses indentation and simple syntax, making it easy to read and write.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>Functions</h4>
+                                        <p>Built-in functions like print() help you perform common tasks quickly.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>Strings</h4>
+                                        <p>Text in Python is handled as strings, enclosed in quotes.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mini-project">
+                                <h3>Mini Project: Personal Introduction</h3>
+                                <p>Create a program that introduces yourself with multiple print statements. Include your name, age, and a fun fact about yourself!</p>
+                                
+                                <div class="project-playground">
+                                    <h4>Mini Project: Personal Introduction</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">Python</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code># Mini Project: Personal Introduction
+# Create a program that introduces yourself
+
+print("=== Personal Introduction ===")
+print()  # This creates a blank line
+
+# Your basic information
+print("Name: [Enter your name here]")
+print("Age: [Enter your age here]")
+print("Location: [Enter your city/country]")
+print()
+
+# Fun facts about yourself
+print("Fun Facts About Me:")
+print("• I am learning Python programming")
+print("• My favorite programming language so far is Python")
+print("• I enjoy solving problems with code")
+print("• [Add your own fun fact here]")
+print()
+
+# Your goals
+print("My Programming Goals:")
+print("1. Master Python basics")
+print("2. Build my first real project")
+print("3. [Add your own goal here]")
+print()
+
+print("Thanks for reading about me!")
+print("Happy coding! 🐍")</code></pre>
+                                    </div>
+                                    <div class="project-instructions">
+                                        <p><strong>🚀 Mini Project Challenge:</strong></p>
+                                        <ul>
+                                            <li>Copy this code and customize it with your information</li>
+                                            <li>Replace all the placeholder text in brackets</li>
+                                            <li>Add at least 2 more fun facts about yourself</li>
+                                            <li>Add 2 more programming goals</li>
+                                            <li>Save as <code>introduction.py</code> and run it</li>
+                                            <li><strong>Bonus:</strong> Add emojis and creative formatting!</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" disabled>← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-2" style="display: none;">
+                            <h2>Lesson 2: Variables and Data Types</h2>
+                            <p>In this lesson, you'll learn how to store and work with different types of data in Python using variables.</p>
+                            
+                            <h3>What are Variables?</h3>
+                            <p>Variables are like containers that store data values. In Python, you can create a variable by simply assigning a value to it.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Creating Variables</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Creating different types of variables
+name = "Alice"              # String (text)
+age = 25                    # Integer (whole number)
+height = 5.6               # Float (decimal number)
+is_student = True          # Boolean (True/False)
+
+# Print the variables
+print("Name:", name)
+print("Age:", age)
+print("Height:", height)
+print("Is student:", is_student)</code></pre>
+                                </div>
+                                <div class="run-instructions">
+                                    <p><strong>💡 How to run this code:</strong></p>
+                                    <ol>
+                                        <li>Copy the code above</li>
+                                        <li>Open your Python editor</li>
+                                        <li>Save as <code>variables.py</code> and run it</li>
+                                        <li>See how different data types are displayed!</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <h3>Python Data Types</h3>
+                            <div class="concept-grid">
+                                <div class="concept-card">
+                                    <h4>String (str)</h4>
+                                    <p>Text data enclosed in quotes: "Hello" or 'World'</p>
+                                </div>
+                                <div class="concept-card">
+                                    <h4>Integer (int)</h4>
+                                    <p>Whole numbers: 42, -17, 0</p>
+                                </div>
+                                <div class="concept-card">
+                                    <h4>Float</h4>
+                                    <p>Decimal numbers: 3.14, -2.5, 0.0</p>
+                                </div>
+                                <div class="concept-card">
+                                    <h4>Boolean (bool)</h4>
+                                    <p>True or False values</p>
+                                </div>
+                            </div>
+
+                            <div class="practice-section">
+                                <h3>Practice Exercise</h3>
+                                <div class="code-playground">
+                                    <h4>Create Your Own Variables</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">Python</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code># Practice: Create variables about yourself
+first_name = "[Your first name]"
+last_name = "[Your last name]"
+current_age = 0  # Replace with your age
+favorite_number = 0  # Replace with your favorite number
+likes_programming = True  # Do you like programming?
+
+# Print a nice introduction
+print("Hi! My name is", first_name, last_name)
+print("I am", current_age, "years old")
+print("My favorite number is", favorite_number)
+print("I like programming:", likes_programming)
+
+# Bonus: Try changing the data types!
+print("Type of name:", type(first_name))
+print("Type of age:", type(current_age))</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-3" style="display: none;">
+                            <h2>Lesson 3: Basic Operations</h2>
+                            <p>Learn how to perform mathematical operations and work with strings in Python.</p>
+                            
+                            <h3>Mathematical Operations</h3>
+                            <p>Python supports all basic mathematical operations and more!</p>
+
+                            <div class="code-example">
+                                <h4>Example: Math Operations</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Basic math operations
+a = 10
+b = 3
+
+print("Addition:", a + b)        # 13
+print("Subtraction:", a - b)     # 7
+print("Multiplication:", a * b)  # 30
+print("Division:", a / b)        # 3.333...
+print("Floor Division:", a // b) # 3
+print("Modulus (remainder):", a % b)  # 1
+print("Exponentiation:", a ** b) # 1000
+
+# Order of operations (PEMDAS)
+result = 2 + 3 * 4
+print("2 + 3 * 4 =", result)    # 14 (not 20!)</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>String Operations</h3>
+                            <div class="code-example">
+                                <h4>Example: Working with Strings</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># String operations
+first_name = "Python"
+last_name = "Programming"
+
+# Concatenation (joining strings)
+full_name = first_name + " " + last_name
+print("Full name:", full_name)
+
+# String repetition
+excited = "Wow! " * 3
+print(excited)  # Wow! Wow! Wow! 
+
+# String length
+print("Length of full name:", len(full_name))
+
+# String methods
+print("Uppercase:", full_name.upper())
+print("Lowercase:", full_name.lower())
+print("Title case:", full_name.title())</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-4" style="display: none;">
+                            <h2>Lesson 4: Input and Output</h2>
+                            <p>Learn how to get input from users and display output in various formats.</p>
+                            
+                            <h3>Getting User Input</h3>
+                            <p>The <code>input()</code> function allows your program to interact with users by accepting their input.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Basic Input</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Getting user input
+name = input("What's your name? ")
+age = input("How old are you? ")
+
+print("Hello,", name)
+print("You are", age, "years old")
+
+# Converting input to numbers
+age_number = int(age)  # Convert string to integer
+print("Next year you'll be", age_number + 1)</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Formatted Output</h3>
+                            <div class="code-example">
+                                <h4>Example: String Formatting</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Different ways to format strings
+name = "Alice"
+age = 25
+height = 5.6
+
+# Method 1: f-strings (recommended)
+print(f"Hi, I'm {name}, I'm {age} years old and {height} feet tall")
+
+# Method 2: .format() method
+print("Hi, I'm {}, I'm {} years old".format(name, age))
+
+# Method 3: % formatting (older style)
+print("Hi, I'm %s, I'm %d years old" % (name, age))</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-5" style="display: none;">
+                            <h2>Lesson 5: Conditional Statements</h2>
+                            <p>Learn how to make decisions in your code using if, elif, and else statements.</p>
+                            
+                            <h3>If Statements</h3>
+                            <p>Conditional statements allow your program to make decisions based on different conditions.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Basic Conditionals</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Basic if statement
+age = 18
+
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a minor")
+
+# Multiple conditions with elif
+score = 85
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+elif score >= 60:
+    print("Grade: D")
+else:
+    print("Grade: F")</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-6" style="display: none;">
+                            <h2>Lesson 6: Loops</h2>
+                            <p>Learn how to repeat code using for and while loops.</p>
+                            
+                            <h3>For Loops</h3>
+                            <p>For loops are used to iterate over sequences like lists, strings, or ranges.</p>
+
+                            <div class="code-example">
+                                <h4>Example: For Loops</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Loop through a range of numbers
+for i in range(5):
+    print("Count:", i)
+
+# Loop through a list
+fruits = ["apple", "banana", "orange"]
+for fruit in fruits:
+    print("I like", fruit)
+
+# While loop
+count = 0
+while count < 3:
+    print("While loop count:", count)
+    count += 1</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-7" style="display: none;">
+                            <h2>Lesson 7: Error Handling</h2>
+                            <p>Learn how to handle errors gracefully in your Python programs.</p>
+                            
+                            <h3>Try-Except Blocks</h3>
+                            <p>Error handling prevents your program from crashing when unexpected situations occur.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Handling Errors</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Basic error handling
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+    print("Result:", result)
+except ValueError:
+    print("That's not a valid number!")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except Exception as e:
+    print("An error occurred:", e)
+finally:
+    print("This always runs")</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-8" style="display: none;">
+                            <h2>Lesson 8: Lists and Tuples</h2>
+                            <p>Learn about Python's most useful data structures for storing collections of items.</p>
+                            
+                            <h3>Working with Lists</h3>
+                            <p>Lists are ordered collections that can store multiple items and can be modified.</p>
+
+                            <div class="code-example">
+                                <h4>Example: List Operations</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Creating and working with lists
+fruits = ["apple", "banana", "orange"]
+numbers = [1, 2, 3, 4, 5]
+
+# Accessing items
+print("First fruit:", fruits[0])
+print("Last fruit:", fruits[-1])
+
+# Adding items
+fruits.append("grape")
+fruits.insert(1, "kiwi")
+
+# Removing items
+fruits.remove("banana")
+last_fruit = fruits.pop()
+
+print("Updated fruits:", fruits)
+print("Removed fruit:", last_fruit)</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Tuples</h3>
+                            <p>Tuples are like lists but cannot be changed once created (immutable).</p>
+
+                            <div class="code-example">
+                                <h4>Example: Working with Tuples</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Creating tuples
+coordinates = (10, 20)
+colors = ("red", "green", "blue")
+
+# Accessing tuple items
+x, y = coordinates  # Tuple unpacking
+print(f"X: {x}, Y: {y}")
+
+# Tuples are immutable
+# coordinates[0] = 15  # This would cause an error!</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-9" style="display: none;">
+                            <h2>Lesson 9: Dictionaries and Sets</h2>
+                            <p>Explore dictionaries for key-value pairs and sets for unique collections.</p>
+                            
+                            <h3>Dictionaries</h3>
+                            <p>Dictionaries store data in key-value pairs, perfect for organizing related information.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Dictionary Operations</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Creating dictionaries
+student = {
+    "name": "Alice",
+    "age": 20,
+    "major": "Computer Science",
+    "grades": [85, 92, 78, 96]
+}
+
+# Accessing values
+print("Student name:", student["name"])
+print("Student age:", student.get("age"))
+
+# Adding/updating values
+student["gpa"] = 3.8
+student["age"] = 21
+
+# Iterating through dictionaries
+for key, value in student.items():
+    print(f"{key}: {value}")</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Sets</h3>
+                            <p>Sets store unique items and are useful for removing duplicates and set operations.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Working with Sets</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Creating sets
+colors = {"red", "green", "blue", "red"}  # Duplicates automatically removed
+print("Colors:", colors)
+
+# Set operations
+primary = {"red", "green", "blue"}
+warm = {"red", "orange", "yellow"}
+
+print("Intersection:", primary & warm)  # Common elements
+print("Union:", primary | warm)         # All elements
+print("Difference:", primary - warm)    # In primary but not warm</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-10" style="display: none;">
+                            <h2>Lesson 10: Working with Strings</h2>
+                            <p>Master advanced string manipulation techniques and methods.</p>
+                            
+                            <h3>String Methods</h3>
+                            <p>Python provides many built-in methods for working with strings effectively.</p>
+
+                            <div class="code-example">
+                                <h4>Example: String Methods</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># String manipulation
+text = "  Hello, Python World!  "
+
+# Cleaning strings
+clean_text = text.strip()  # Remove whitespace
+print("Clean:", clean_text)
+
+# Case methods
+print("Upper:", clean_text.upper())
+print("Lower:", clean_text.lower())
+print("Title:", clean_text.title())
+
+# Searching and replacing
+print("Contains 'Python':", "Python" in clean_text)
+print("Replace:", clean_text.replace("World", "Universe"))
+
+# Splitting strings
+words = clean_text.split(", ")
+print("Words:", words)
+
+# Joining strings
+joined = " - ".join(words)
+print("Joined:", joined)</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-11" style="display: none;">
+                            <h2>Lesson 11: Defining Functions</h2>
+                            <p>Learn how to create reusable code blocks with functions.</p>
+                            
+                            <h3>Creating Functions</h3>
+                            <p>Functions allow you to organize code into reusable blocks that perform specific tasks.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Basic Functions</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Defining functions
+def greet():
+    print("Hello, World!")
+
+def greet_person(name):
+    print(f"Hello, {name}!")
+
+def add_numbers(a, b):
+    result = a + b
+    return result
+
+# Calling functions
+greet()
+greet_person("Alice")
+
+sum_result = add_numbers(5, 3)
+print("Sum:", sum_result)
+
+# Function with default parameter
+def greet_with_title(name, title="Mr."):
+    print(f"Hello, {title} {name}!")
+
+greet_with_title("Smith")
+greet_with_title("Johnson", "Dr.")</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-12" style="display: none;">
+                            <h2>Lesson 12: Parameters and Arguments</h2>
+                            <p>Master different types of function parameters and argument passing techniques.</p>
+                            
+                            <h3>Advanced Parameter Types</h3>
+                            <p>Python functions support various parameter types for maximum flexibility.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Parameter Types</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Different parameter types
+def flexible_function(required, default_param="default", *args, **kwargs):
+    print("Required:", required)
+    print("Default:", default_param)
+    print("Args:", args)
+    print("Kwargs:", kwargs)
+
+# Different ways to call the function
+flexible_function("hello")
+flexible_function("hello", "custom", 1, 2, 3, name="Alice", age=25)
+
+# Variable-length arguments
+def sum_all(*numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total
+
+print("Sum:", sum_all(1, 2, 3, 4, 5))
+
+# Keyword arguments
+def create_profile(**info):
+    for key, value in info.items():
+        print(f"{key}: {value}")
+
+create_profile(name="Bob", age=30, city="New York")</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" onclick="nextLesson()">Next Lesson →</button>
+                            </div>
+                        </div>
+
+                        <div class="lesson-content" id="lesson-13" style="display: none;">
+                            <h2>Lesson 13: Lambda Functions</h2>
+                            <p>Discover lambda functions for creating concise, anonymous functions.</p>
+                            
+                            <h3>Lambda Functions</h3>
+                            <p>Lambda functions are small, anonymous functions that can have any number of arguments but can only have one expression.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Lambda Functions</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Lambda function basics
+square = lambda x: x ** 2
+add = lambda x, y: x + y
+
+print("Square of 5:", square(5))
+print("Add 3 + 4:", add(3, 4))
+
+# Using lambda with built-in functions
+numbers = [1, 2, 3, 4, 5]
+
+# Map function
+squared_numbers = list(map(lambda x: x ** 2, numbers))
+print("Squared:", squared_numbers)
+
+# Filter function
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print("Even numbers:", even_numbers)
+
+# Sorting with lambda
+students = [("Alice", 85), ("Bob", 90), ("Charlie", 78)]
+students.sort(key=lambda student: student[1])  # Sort by grade
+print("Sorted by grade:", students)</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="practice-section">
+                                <h3>Course Complete! 🎉</h3>
+                                <p>Congratulations! You've completed all the Python fundamentals. You now have a solid foundation in Python programming.</p>
+                                
+                                <div class="concept-grid">
+                                    <div class="concept-card">
+                                        <h4>What You've Learned</h4>
+                                        <p>Variables, data types, control structures, functions, and more!</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>Next Steps</h4>
+                                        <p>Practice with projects, explore libraries, or try advanced topics.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lesson-navigation-buttons">
+                                <button class="btn btn-secondary" onclick="previousLesson()">← Previous Lesson</button>
+                                <button class="btn btn-primary" disabled>Course Complete! ✅</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-resources">
+            <div class="container">
+                <h2>Additional Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>📖 Python Documentation</h3>
+                        <p>Official Python documentation for reference and deeper learning.</p>
+                        <a href="https://docs.python.org/3/" target="_blank" class="btn btn-outline">Visit Docs</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>💻 Practice Problems</h3>
+                        <p>Additional coding challenges to strengthen your Python skills.</p>
+                        <a href="#" class="btn btn-outline">View Problems</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>🎥 Video Tutorials</h3>
+                        <p>Supplementary video content explaining complex concepts.</p>
+                        <a href="#" class="btn btn-outline">Watch Videos</a>
+                    </div>
+                    <div class="resource-card">
+                        <h3>💬 Community</h3>
+                        <p>Join our community forum to ask questions and share projects.</p>
+                        <a href="#" class="btn btn-outline">Join Forum</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Env Open Education</h3>
+                    <p>Empowering the next generation of programmers through interactive, hands-on learning experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Courses</h4>
+                    <ul>
+                        <li><a href="python-course.html">Python Programming</a></li>
+                        <li><a href="javascript-course.html">JavaScript Development</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Env Open. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/course.js"></script>
+</body>
+</html>
