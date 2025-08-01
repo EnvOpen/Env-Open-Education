@@ -194,14 +194,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const nextLessonElement = document.getElementById(`lesson-${nextLessonId}`);
         
         if (nextLessonElement) {
-            // Hide current lesson
-            const currentLessonElement = document.getElementById(`lesson-${currentLessonId}`);
+                        // Hide current lesson
             if (currentLessonElement) {
-                currentLessonElement.style.display = 'none';
+                currentLessonElement.classList.add('hidden');
             }
             
             // Show next lesson
-            nextLessonElement.style.display = 'block';
+            nextLessonElement.classList.remove('hidden');
             
             // Update navigation state
             updateLessonNavigation(currentLessonId, nextLessonId);
@@ -224,11 +223,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Hide current lesson
             const currentLessonElement = document.getElementById(`lesson-${currentLessonId}`);
             if (currentLessonElement) {
-                currentLessonElement.style.display = 'none';
+                currentLessonElement.classList.add('hidden');
             }
             
             // Show previous lesson
-            prevLessonElement.style.display = 'block';
+            prevLessonElement.classList.remove('hidden');
             
             // Update navigation state
             updateLessonNavigation(currentLessonId, prevLessonId);
@@ -378,9 +377,9 @@ document.addEventListener('DOMContentLoaded', function() {
         allLessons.forEach(lesson => {
             const lessonId = parseInt(lesson.id.replace('lesson-', ''));
             if (lessonId === currentLessonId) {
-                lesson.style.display = 'block';
+                lesson.classList.remove('hidden');
             } else {
-                lesson.style.display = 'none';
+                lesson.classList.add('hidden');
             }
         });
         
@@ -412,11 +411,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Hide current lesson
             const currentLessonElement = document.getElementById(`lesson-${currentLessonId}`);
             if (currentLessonElement) {
-                currentLessonElement.style.display = 'none';
+                currentLessonElement.classList.add('hidden');
             }
             
             // Show target lesson
-            targetLessonElement.style.display = 'block';
+            targetLessonElement.classList.remove('hidden');
             
             // Update navigation state
             updateLessonNavigation(currentLessonId, targetLessonId);
@@ -478,7 +477,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Calculate progress based only on current visible lesson content
         const currentLessonElement = document.getElementById(`lesson-${courseProgress.currentLesson}`);
         
-        if (currentLessonElement && currentLessonElement.style.display !== 'none') {
+        if (currentLessonElement && !currentLessonElement.classList.contains('hidden')) {
             const scrollTop = window.scrollY;
             const lessonTop = currentLessonElement.offsetTop;
             const lessonHeight = currentLessonElement.offsetHeight;

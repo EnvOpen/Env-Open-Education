@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Web Development Course - Env Open Education</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <a href="index.html" class="nav-brand">Env Open Education</a>
-                <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="courses.html" class="nav-link active">Courses</a></li>
-                </ul>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Env Open Education</h2>
             </div>
-        </nav>
-    </header>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="courses.html" class="nav-link">Courses</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <main>
         <section class="course-hero">
@@ -288,7 +295,7 @@ flask run --host=0.0.0.0 --port=5000</code></pre>
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-2" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-2">
                             <h2>Lesson 2: Routes and Views</h2>
                             <p>Learn advanced routing techniques and how to organize your Flask application views effectively.</p>
                             
@@ -423,7 +430,7 @@ if __name__ == '__main__':
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-3" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-3">
                             <h2>Lesson 3: Templates with Jinja2</h2>
                             <p>Master Flask's powerful template engine to create dynamic HTML pages.</p>
                             
@@ -438,37 +445,35 @@ if __name__ == '__main__':
                                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                                     </div>
                                     <pre><code><!-- templates/base.html -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}My Flask App{% endblock %}</title>
-    <style>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;title&gt;{% block title %}My Flask App{% endblock %}&lt;/title&gt;
+    &lt;style&gt;
         body { font-family: Arial, sans-serif; margin: 40px; }
         .header { background: #f0f0f0; padding: 20px; margin-bottom: 20px; }
         .nav a { margin-right: 15px; text-decoration: none; }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>My Flask Application</h1>
-        <nav class="nav">
-            <a href="{{ url_for('index') }}">Home</a>
-            <a href="{{ url_for('about') }}">About</a>
-            <a href="{{ url_for('users') }}">Users</a>
-        </nav>
-    </div>
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="header"&gt;
+        &lt;h1&gt;My Flask Application&lt;/h1&gt;
+        &lt;nav class="nav"&gt;
+            &lt;a href="{{ url_for('index') }}"&gt;Home&lt;/a&gt;
+            &lt;a href="{{ url_for('about') }}"&gt;About&lt;/a&gt;
+            &lt;a href="{{ url_for('users') }}"&gt;Users&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/div&gt;
     
-    <main>
+    &lt;main&gt;
         {% block content %}{% endblock %}
-    </main>
+    &lt;/main&gt;
     
-    <footer>
-        <p>&copy; 2025 My Flask App</p>
-    </footer>
-</body>
-</html></code></pre>
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2025 My Flask App&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
                                 </div>
                             </div>
 
@@ -520,25 +525,25 @@ if __name__ == '__main__':
 {% block title %}{{ title }} - My Flask App{% endblock %}
 
 {% block content %}
-<h2>Welcome to Our Community!</h2>
-<p>We have {{ users|length }} amazing users.</p>
+&lt;h2&gt;Welcome to Our Community!&lt;/h2&gt;
+&lt;p&gt;We have {{ users|length }} amazing users.&lt;/p&gt;
 
 {% if users %}
-    <h3>Our Users:</h3>
-    <ul>
+    &lt;h3&gt;Our Users:&lt;/h3&gt;
+    &lt;ul&gt;
     {% for user in users %}
-        <li>
-            <strong>{{ user.name }}</strong> 
+        &lt;li&gt;
+            &lt;strong&gt;{{ user.name }}&lt;/strong&gt; 
             ({{ user.age }} years old, from {{ user.city }})
-            <a href="{{ url_for('user_detail', name=user.name) }}">View Profile</a>
-        </li>
+            &lt;a href="{{ url_for('user_detail', name=user.name) }}"&gt;View Profile&lt;/a&gt;
+        &lt;/li&gt;
     {% endfor %}
-    </ul>
+    &lt;/ul&gt;
 {% else %}
-    <p>No users found.</p>
+    &lt;p&gt;No users found.&lt;/p&gt;
 {% endif %}
 
-<h3>Current Time: {{ moment().format('YYYY-MM-DD HH:mm:ss') }}</h3>
+&lt;h3&gt;Current Time: {{ moment().format('YYYY-MM-DD HH:mm:ss') }}&lt;/h3&gt;
 {% endblock %}</code></pre>
                                 </div>
                             </div>
@@ -549,7 +554,7 @@ if __name__ == '__main__':
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-4" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-4">
                             <h2>Lesson 4: SQLAlchemy ORM</h2>
                             <p>Learn to integrate databases into your Flask applications using SQLAlchemy ORM.</p>
                             
@@ -683,7 +688,7 @@ if __name__ == '__main__':
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-5" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-5">
                             <h2>Lesson 5: Database Models</h2>
                             <p>Design robust database models with relationships, validations, and advanced SQLAlchemy features.</p>
                             
@@ -849,7 +854,7 @@ def popular_posts():
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-6" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-6">
                             <h2>Lesson 6: Forms and User Input</h2>
                             <p>Handle user input securely with Flask-WTF forms and validation.</p>
                             
@@ -1030,7 +1035,7 @@ def create_post():
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-7" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-7">
                             <h2>Lesson 7: RESTful APIs</h2>
                             <p>Build powerful REST APIs with Flask to serve data to web and mobile applications.</p>
                             
@@ -1094,7 +1099,7 @@ def create_user():
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-8" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-8">
                             <h2>Lesson 8: JSON and Data Handling</h2>
                             <p>Master data serialization, validation, and JSON API best practices.</p>
                             
@@ -1147,7 +1152,7 @@ def create_user():
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-9" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-9">
                             <h2>Lesson 9: Authentication & Security</h2>
                             <p>Implement secure user authentication, authorization, and protect your Flask applications.</p>
                             
@@ -1220,7 +1225,7 @@ def get_profile(current_user):
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-10" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-10">
                             <h2>Lesson 10: Testing Flask Apps</h2>
                             <p>Write comprehensive tests for your Flask applications to ensure reliability and maintainability.</p>
                             
@@ -1294,7 +1299,7 @@ def test_login_user(client):
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-11" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-11">
                             <h2>Lesson 11: Deployment Strategies</h2>
                             <p>Learn how to deploy your Flask applications to production environments.</p>
                             
@@ -1394,7 +1399,7 @@ CMD ["gunicorn", "-c", "gunicorn.conf.py", "app:app"]</code></pre>
                             </div>
                         </div>
 
-                        <div class="lesson-content" id="lesson-12" style="display: none;">
+                        <div class="lesson-content hidden" id="lesson-12">
                             <h2>Lesson 12: Advanced Features</h2>
                             <p>Explore advanced Flask features and best practices for building scalable web applications.</p>
                             
