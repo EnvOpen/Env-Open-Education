@@ -352,10 +352,10 @@ print("Happy coding! 🐍")</code></pre>
 
                         <div class="lesson-content hidden" id="lesson-2">
                             <h2>Lesson 2: Variables and Data Types</h2>
-                            <p>In this lesson, you'll learn how to store and work with different types of data in Python using variables.</p>
+                            <p>In this lesson, you'll learn how to store and work with different types of data in Python using variables. We'll also explore how variables work within functions, which is crucial for writing good Python code.</p>
                             
                             <h3>What are Variables?</h3>
-                            <p>Variables are like containers that store data values. In Python, you can create a variable by simply assigning a value to it.</p>
+                            <p>Variables are like containers that store data values. Think of them as labeled boxes where you can put different types of information. In Python, you can create a variable by simply assigning a value to it.</p>
 
                             <div class="code-example">
                                 <h4>Example: Creating Variables</h4>
@@ -407,33 +407,342 @@ print("Is student:", is_student)</code></pre>
                                 </div>
                             </div>
 
-                            <div class="practice-section">
-                                <h3>Practice Exercise</h3>
-                                <div class="code-playground">
-                                    <h4>Create Your Own Variables</h4>
+                            <h3>Variable Naming Rules and Best Practices</h3>
+                            <p>Python has specific rules for naming variables. Following these rules and best practices will make your code more readable and prevent errors.</p>
+
+                            <div class="important-note">
+                                <h3>🔧 Variable Naming Rules</h3>
+                                <div class="naming-rules">
+                                    <h4>Must Follow (Required Rules):</h4>
+                                    <ul>
+                                        <li>Start with a letter (a-z, A-Z) or underscore (_)</li>
+                                        <li>Can contain letters, numbers, and underscores</li>
+                                        <li>Case-sensitive (age and Age are different variables)</li>
+                                        <li>Cannot use Python keywords (like print, if, for, etc.)</li>
+                                    </ul>
+                                    
+                                    <h4>Best Practices (Recommended):</h4>
+                                    <ul>
+                                        <li>Use lowercase with underscores: <code>first_name</code>, <code>user_age</code></li>
+                                        <li>Use descriptive names: <code>student_count</code> instead of <code>sc</code></li>
+                                        <li>Avoid confusing names: don't use <code>l</code>, <code>O</code>, or <code>I</code> alone</li>
+                                        <li>Keep names reasonably short but clear</li>
+                                    </ul>
+                                </div>
+
+                                <div class="code-example">
+                                    <h4>Example: Good vs Bad Variable Names</h4>
                                     <div class="code-block">
                                         <div class="code-header">
                                             <span class="code-language">Python</span>
                                             <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                                         </div>
-                                        <pre><code># Practice: Create variables about yourself
-first_name = "[Your first name]"
-last_name = "[Your last name]"
-current_age = 0  # Replace with your age
-favorite_number = 0  # Replace with your favorite number
-likes_programming = True  # Do you like programming?
+                                        <pre><code># ✅ GOOD variable names
+user_name = "Alice"
+student_age = 20
+total_score = 95.5
+is_logged_in = True
 
-# Print a nice introduction
-print("Hi! My name is", first_name, last_name)
-print("I am", current_age, "years old")
-print("My favorite number is", favorite_number)
-print("I like programming:", likes_programming)
+# ❌ BAD variable names (but still valid)
+n = "Alice"           # Too short, not descriptive
+studAge = 20         # Inconsistent style (camelCase)
+totalScore = 95.5    # Inconsistent style
+x = True             # Not descriptive
 
-# Bonus: Try changing the data types!
-print("Type of name:", type(first_name))
-print("Type of age:", type(current_age))</code></pre>
+# ❌ INVALID variable names (will cause errors)
+# 2name = "Alice"     # Starts with number
+# user-name = "Bob"   # Contains hyphen
+# class = "Math"      # Uses Python keyword</code></pre>
                                     </div>
                                 </div>
+                            </div>
+
+                            <h3>Variables and Functions: Understanding Scope</h3>
+                            <p>One of the most confusing aspects for beginners is how variables work inside and outside of functions. Let's break this down step by step.</p>
+
+                            <div class="important-note">
+                                <h3>🎯 Variable Scope Explained</h3>
+                                <p>Variable <strong>scope</strong> determines where in your code a variable can be used. Think of it like rooms in a house - some things are only available in certain rooms!</p>
+                                
+                                <div class="scope-explanation">
+                                    <h4>Global Variables (Available Everywhere)</h4>
+                                    <p>Variables created outside of functions can be used anywhere in your program.</p>
+                                    
+                                    <h4>Local Variables (Only Available Inside Functions)</h4>
+                                    <p>Variables created inside functions can only be used within that specific function.</p>
+                                </div>
+
+                                <div class="code-example">
+                                    <h4>Example: Global vs Local Variables</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">Python</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code># Global variable (can be used anywhere)
+global_name = "Alice"
+
+def greet_user():
+    # Local variable (only exists inside this function)
+    local_greeting = "Hello there!"
+    
+    # This function can use both global and local variables
+    print(local_greeting, global_name)
+    
+    # Create another local variable
+    excitement_level = "very excited"
+    print(f"I am {excitement_level} to learn Python!")
+
+# Call the function
+greet_user()
+
+# This works - global variable is accessible
+print("Global name outside function:", global_name)
+
+# This would cause an ERROR - local variables don't exist outside the function
+# print(local_greeting)  # NameError: name 'local_greeting' is not defined
+# print(excitement_level)  # NameError: name 'excitement_level' is not defined</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Passing Variables to Functions</h3>
+                            <p>Functions can receive variables as inputs (called parameters or arguments). This is how you share data with functions.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Functions with Parameters</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Functions that accept variables as input
+def introduce_person(name, age, city):
+    # name, age, and city are local variables inside this function
+    print(f"Hi! My name is {name}")
+    print(f"I am {age} years old")
+    print(f"I live in {city}")
+    
+    # You can create more local variables inside the function
+    introduction_complete = True
+    print("Introduction complete:", introduction_complete)
+
+# Variables to pass to the function
+student_name = "Bob"
+student_age = 22
+student_city = "New York"
+
+# Call the function with variables
+introduce_person(student_name, student_age, student_city)
+
+# You can also pass values directly
+introduce_person("Carol", 19, "Los Angeles")
+
+# The local variables from inside the function don't exist here
+# print(introduction_complete)  # This would cause an error</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Returning Variables from Functions</h3>
+                            <p>Functions can send variables back as output using the <code>return</code> statement. This is how functions share their results with the rest of your program.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Functions that Return Variables</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Function that calculates and returns a result
+def calculate_total_cost(item_price, tax_rate):
+    # Local variables for calculations
+    tax_amount = item_price * tax_rate
+    total_cost = item_price + tax_amount
+    
+    # Return the result so it can be used outside the function
+    return total_cost
+
+# Function that processes text and returns multiple values
+def analyze_name(full_name):
+    # Local variables for processing
+    name_length = len(full_name)
+    name_upper = full_name.upper()
+    name_lower = full_name.lower()
+    
+    # Return multiple values
+    return name_length, name_upper, name_lower
+
+# Using functions that return variables
+price = 100.0
+tax = 0.08
+
+# The returned value is stored in a new variable
+final_cost = calculate_total_cost(price, tax)
+print(f"Final cost: ${final_cost:.2f}")
+
+# Receiving multiple returned values
+user_name = "Alice Johnson"
+length, upper_name, lower_name = analyze_name(user_name)
+
+print(f"Name: {user_name}")
+print(f"Length: {length}")
+print(f"Uppercase: {upper_name}")
+print(f"Lowercase: {lower_name}")</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>Common Variable Mistakes and How to Avoid Them</h3>
+                            <div class="common-mistakes">
+                                <h4>❌ Mistake 1: Using variables before defining them</h4>
+                                <div class="code-block">
+                                    <pre><code># WRONG:
+print(my_name)  # NameError!
+my_name = "Alice"
+
+# CORRECT:
+my_name = "Alice"
+print(my_name)</code></pre>
+                                </div>
+
+                                <h4>❌ Mistake 2: Trying to use local variables outside functions</h4>
+                                <div class="code-block">
+                                    <pre><code># WRONG:
+def my_function():
+    local_var = "Hello"
+
+my_function()
+print(local_var)  # NameError!
+
+# CORRECT:
+def my_function():
+    local_var = "Hello"
+    return local_var  # Return the value
+
+result = my_function()
+print(result)</code></pre>
+                                </div>
+
+                                <h4>❌ Mistake 3: Confusing variable types</h4>
+                                <div class="code-block">
+                                    <pre><code># WRONG:
+age = "25"  # This is a string, not a number
+next_year = age + 1  # TypeError!
+
+# CORRECT:
+age = 25  # This is a number
+next_year = age + 1
+print(next_year)  # Works perfectly</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="practice-section">
+                                <h3>Practice Exercise: Variables and Functions</h3>
+                                <div class="code-playground">
+                                    <h4>Build a Personal Profile System</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">Python</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code># Practice: Create variables and functions together
+
+# Global variables (available everywhere)
+app_name = "Personal Profile System"
+version = "1.0"
+
+def create_profile(first_name, last_name, age, hobby):
+    """
+    This function creates a user profile using the provided information.
+    All parameters are local variables inside this function.
+    """
+    # Local variables for processing
+    full_name = first_name + " " + last_name
+    is_adult = age >= 18
+    profile_id = len(full_name) * age  # Simple ID calculation
+    
+    # Create a profile summary
+    profile_summary = f"""
+    === USER PROFILE ===
+    Name: {full_name}
+    Age: {age}
+    Adult: {is_adult}
+    Hobby: {hobby}
+    Profile ID: {profile_id}
+    """
+    
+    # Return multiple pieces of information
+    return full_name, is_adult, profile_id, profile_summary
+
+def display_app_info():
+    """
+    This function uses global variables to show app information.
+    """
+    print(f"Welcome to {app_name} v{version}")
+    print("-" * 40)
+
+# Main program execution
+display_app_info()
+
+# Your variables (replace with your own information)
+my_first_name = "[Your First Name]"
+my_last_name = "[Your Last Name]"
+my_age = 0  # Replace with your age
+my_hobby = "[Your Hobby]"
+
+# Call the function and receive the returned values
+name, adult_status, user_id, summary = create_profile(
+    my_first_name, 
+    my_last_name, 
+    my_age, 
+    my_hobby
+)
+
+# Use the returned variables
+print(summary)
+print(f"\nQuick Facts:")
+print(f"Full Name: {name}")
+print(f"User ID: {user_id}")
+print(f"Can Vote: {adult_status}")</code></pre>
+                                    </div>
+                                    <div class="exercise-instructions">
+                                        <p><strong>🎯 Your Challenge:</strong></p>
+                                        <ul>
+                                            <li>Replace the placeholder values with your own information</li>
+                                            <li>Run the program and see how variables flow between functions</li>
+                                            <li>Try modifying the <code>profile_id</code> calculation</li>
+                                            <li>Add a new function that calculates birth year using the age</li>
+                                            <li>Experiment with different data types for the variables</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="key-concepts">
+                                <h3>Key Takeaways</h3>
+                                <div class="concept-grid">
+                                    <div class="concept-card">
+                                        <h4>🎯 Variable Scope</h4>
+                                        <p>Global variables work everywhere. Local variables only work inside their function.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>📥 Function Parameters</h4>
+                                        <p>Use parameters to send variables into functions as input data.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>📤 Return Values</h4>
+                                        <p>Use return statements to send variables out of functions as results.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>🏷️ Naming Convention</h4>
+                                        <p>Use clear, descriptive names with lowercase and underscores.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="remember-box">
+                                <h4>💡 Remember:</h4>
+                                <p><strong>Variables are the building blocks of programming!</strong></p>
+                                <p>Understanding how they work with functions is crucial for writing effective Python code. Practice creating functions that accept variables and return results.</p>
                             </div>
 
                             <div class="lesson-navigation-buttons">
