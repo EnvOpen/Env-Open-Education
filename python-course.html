@@ -112,28 +112,92 @@
                     <div class="course-main">
                         <div class="lesson-content" id="lesson-1">
                             <h2>Lesson 1: Getting Started with Python</h2>
-                            <p>Welcome to your first Python lesson! Python is a powerful, easy-to-learn programming language that's perfect for beginners and professionals alike.</p>
+                            <p>Welcome to your first Python lesson! Python is a powerful, easy-to-learn programming language that's perfect for beginners and professionals alike. By the end of this lesson, you'll understand what makes Python special and write your first working programs.</p>
                             
-                            <h3>What is Python?</h3>
-                            <p>Python is a high-level programming language known for its simple syntax and readability. It's used for web development, data analysis, artificial intelligence, automation, and much more.</p>
+                            <h3>What is Python and Why Should You Learn It?</h3>
+                            <p>Python is a high-level programming language created by Guido van Rossum in 1991. It's designed to be easy to read and write, making it perfect for beginners while being powerful enough for professionals.</p>
 
-                            <h3>Your First Python Program</h3>
-                            <p>Let's start with the traditional "Hello, World!" program. This simple program demonstrates the basic syntax of Python.</p>
+                            <div class="concept-grid">
+                                <div class="concept-card">
+                                    <h4>🌐 Web Development</h4>
+                                    <p>Build websites and web applications (Instagram, YouTube, Dropbox)</p>
+                                </div>
+                                <div class="concept-card">
+                                    <h4>📊 Data Science</h4>
+                                    <p>Analyze data, create charts, and discover insights</p>
+                                </div>
+                                <div class="concept-card">
+                                    <h4>🤖 Artificial Intelligence</h4>
+                                    <p>Create smart programs that can learn and make decisions</p>
+                                </div>
+                                <div class="concept-card">
+                                    <h4>⚡ Automation</h4>
+                                    <p>Automate boring tasks and save time</p>
+                                </div>
+                            </div>
+
+                            <h3>Why Python is Perfect for Beginners</h3>
+                            <div class="important-note">
+                                <h3>🎯 Python's Beginner-Friendly Features</h3>
+                                <div class="python-features">
+                                    <h4>Simple Syntax</h4>
+                                    <p>Python reads almost like English. Compare these examples:</p>
+                                    
+                                    <div class="code-comparison">
+                                        <div class="comparison-item">
+                                            <h5>Other Languages (Complex):</h5>
+                                            <div class="code-block">
+                                                <pre><code>// Java
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="comparison-item">
+                                            <h5>Python (Simple):</h5>
+                                            <div class="code-block">
+                                                <pre><code># Python
+print("Hello, World!")</code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <h4>No Semicolons or Brackets Required</h4>
+                                    <p>Python uses indentation (spaces) to organize code, making it clean and readable.</p>
+                                    
+                                    <h4>Built-in Help</h4>
+                                    <p>Python comes with thousands of built-in features, so you don't have to write everything from scratch.</p>
+                                </div>
+                            </div>
+
+                            <h3>Your First Python Program: The Anatomy of Code</h3>
+                            <p>Let's start with the traditional "Hello, World!" program and break down every single part so you understand exactly what's happening.</p>
 
                             <div class="code-example">
-                                <h4>Example: Hello World</h4>
+                                <h4>Example: Hello World - Line by Line</h4>
                                 <div class="code-block">
                                     <div class="code-header">
                                         <span class="code-language">Python</span>
                                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                                     </div>
-                                    <pre><code># Your first Python program
+                                    <pre><code># This is a comment - Python ignores this line
+# Comments help explain what your code does
+
 print("Hello, World!")
+
+# Let's print multiple lines
 print("Welcome to Python programming!")
 print("This is your first step into coding.")
 
-# You can change this message to anything you want
-print("I'm learning Python with Env Open Education!")</code></pre>
+# You can print different types of messages
+print("I'm learning Python with Env Open Education!")
+print("Python makes programming fun and easy!")
+
+# Comments can go anywhere
+print("This line has code")  # This is a comment at the end</code></pre>
                                 </div>
                                 <div class="run-instructions">
                                     <p><strong>💡 How to run this code:</strong></p>
@@ -142,17 +206,39 @@ print("I'm learning Python with Env Open Education!")</code></pre>
                                         <li>Open your Python editor (IDLE, VS Code, PyCharm, or any text editor)</li>
                                         <li>Paste the code and save as <code>hello_world.py</code></li>
                                         <li>Run the program and see the output!</li>
+                                        <li>Try changing the messages and run it again!</li>
                                     </ol>
                                 </div>
                             </div>
 
                             <div class="explanation">
-                                <h4>Code Explanation:</h4>
-                                <ul>
-                                    <li><code>print()</code> is a built-in function that displays text on the screen</li>
-                                    <li>The text inside quotes is called a string</li>
-                                    <li>Python automatically handles the output formatting</li>
-                                </ul>
+                                <h4>Code Breakdown - Understanding Every Part:</h4>
+                                <div class="code-breakdown">
+                                    <div class="breakdown-item">
+                                        <h5><code>#</code> Comments</h5>
+                                        <p>Lines starting with # are comments. Python completely ignores them. Use comments to:</p>
+                                        <ul>
+                                            <li>Explain what your code does</li>
+                                            <li>Leave notes for yourself or others</li>
+                                            <li>Temporarily disable code without deleting it</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="breakdown-item">
+                                        <h5><code>print()</code> Function</h5>
+                                        <p>This is a built-in Python function that displays text on the screen. It:</p>
+                                        <ul>
+                                            <li>Takes whatever you put inside the parentheses</li>
+                                            <li>Displays it on the screen</li>
+                                            <li>Automatically moves to the next line when done</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="breakdown-item">
+                                        <h5><code>"Text in Quotes"</code> Strings</h5>
+                                        <p>Text inside quotes is called a "string". The quotes tell Python "this is text to display, not code to run".</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="important-note">
@@ -164,7 +250,7 @@ print("I'm learning Python with Env Open Education!")</code></pre>
                                     <p>In Python, there's a big difference between:</p>
                                     <ul>
                                         <li><strong>Text (strings)</strong> - needs quotes: <code>"Hello"</code></li>
-                                        <li><strong>Code (variables/functions)</strong> - no quotes: <code>print</code></li>
+                                        <li><strong>Code instructions</strong> - no quotes: <code>print</code></li>
                                     </ul>
                                     
                                     <div class="code-example">
@@ -177,6 +263,8 @@ print("I'm learning Python with Env Open Education!")</code></pre>
                                             <pre><code># ✅ CORRECT - Text needs quotes
 print("Hello World")        # This prints: Hello World
 print("Python is fun")     # This prints: Python is fun
+print("123")               # This prints the text: 123
+print("Today is sunny")    # This prints: Today is sunny
 
 # ❌ WRONG - Without quotes, Python thinks it's code
 # print(Hello World)       # This would cause an error!
@@ -184,12 +272,16 @@ print("Python is fun")     # This prints: Python is fun
 
 # You can use single quotes too:
 print('Hello with single quotes')
+print('This also works perfectly')
 
-# Both work the same way:
+# Both single and double quotes work the same way:
 print("Double quotes work")
 print('Single quotes work')
+print("You can mix them, but be consistent!")
 
-# But be consistent in your style!</code></pre>
+# Special case: quotes inside quotes
+print("She said, 'Hello there!'")  # Double quotes outside, single inside
+print('He replied, "Nice to meet you!"')  # Single outside, double inside</code></pre>
                                         </div>
                                     </div>
                                     
@@ -197,9 +289,10 @@ print('Single quotes work')
                                         <h4>Why Is This Important?</h4>
                                         <ul>
                                             <li><strong>Tells Python what's text:</strong> Quotes tell Python "this is text to display, not code to run"</li>
-                                            <li><strong>Prevents errors:</strong> Without quotes, Python will look for variables or functions with those names</li>
+                                            <li><strong>Prevents errors:</strong> Without quotes, Python will look for code instructions with those names</li>
                                             <li><strong>Creates strings:</strong> Anything in quotes becomes a "string" data type that you can work with</li>
                                             <li><strong>Allows special characters:</strong> You can include spaces, punctuation, and symbols in strings</li>
+                                            <li><strong>Enables text processing:</strong> Later you'll learn to manipulate and work with these text strings</li>
                                         </ul>
                                     </div>
                                     
@@ -207,29 +300,108 @@ print('Single quotes work')
                                         <h4>Common Beginner Mistakes:</h4>
                                         <div class="mistake-examples">
                                             <div class="mistake">
-                                                <strong>❌ Forgetting quotes:</strong><br>
-                                                <code>print(Hello)</code> → Error! Python looks for a variable named "Hello"
+                                                <strong>❌ Forgetting quotes around text:</strong><br>
+                                                <code>print(Hello)</code> → Error! Python looks for something named "Hello"
                                             </div>
                                             <div class="mistake">
-                                                <strong>✅ Using quotes:</strong><br>
+                                                <strong>✅ Using quotes correctly:</strong><br>
                                                 <code>print("Hello")</code> → Works! Prints the text "Hello"
                                             </div>
                                             <div class="mistake">
-                                                <strong>❌ Mixing quote types:</strong><br>
+                                                <strong>❌ Mixing quote types incorrectly:</strong><br>
                                                 <code>print("Hello')</code> → Error! Quotes don't match
                                             </div>
                                             <div class="mistake">
-                                                <strong>✅ Matching quotes:</strong><br>
-                                                <code>print("Hello")</code> or <code>print('Hello')</code> → Both work!
+                                                <strong>✅ Matching quotes properly:</strong><br>
+                                                <code>print("Hello")</code> or <code>print('Hello')</code> → Both work perfectly!
+                                            </div>
+                                            <div class="mistake">
+                                                <strong>❌ Forgetting closing quote:</strong><br>
+                                                <code>print("Hello World)</code> → Error! Missing closing quote
+                                            </div>
+                                            <div class="mistake">
+                                                <strong>✅ Complete quote pairs:</strong><br>
+                                                <code>print("Hello World")</code> → Works! Both quotes present
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <div class="remember-box">
-                                    <h4>💡 Remember:</h4>
-                                    <p><strong>If you want Python to treat something as text, put it in quotes!</strong></p>
-                                    <p>This applies to any text you want to display, store, or work with in your programs.</p>
+                            </div>
+
+                            <h3>Exploring Different Types of Output</h3>
+                            <p>The print() function is more powerful than it first appears. Let's explore different ways to display information.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Creative Ways to Use Print</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Basic printing
+print("This is a simple message")
+
+# Printing multiple items at once (they'll be separated by spaces)
+print("Hello", "there", "Python", "student!")
+
+# Printing numbers (no quotes needed for numbers)
+print(42)
+print(3.14159)
+print(-17)
+
+# Mixing text and numbers
+print("My age is", 25)
+print("Pi is approximately", 3.14159)
+print("Temperature:", -5, "degrees")
+
+# Creating blank lines for spacing
+print("First line")
+print()  # This prints a blank line
+print("Third line")
+
+# Printing special characters and symbols
+print("★ Welcome to Python! ★")
+print("→ This is an arrow")
+print("♥ Python is fun! ♥")
+print("© 2025 My First Program")
+
+# Long messages split across multiple prints
+print("This is a very long message")
+print("that continues on the next line")
+print("and provides lots of information")
+print("about what our program does!")
+
+# Creating simple patterns with text
+print("*****")
+print("*   *")
+print("*   *")
+print("*****")
+print()
+print("Python")
+print("Is")
+print("Awesome!")</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="key-concepts">
+                                <h3>Key Programming Concepts Learned</h3>
+                                <div class="concept-grid">
+                                    <div class="concept-card">
+                                        <h4>💬 Comments</h4>
+                                        <p>Use # to add explanations. Python ignores comments completely.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>📝 Strings</h4>
+                                        <p>Text in quotes. Use "double" or 'single' quotes consistently.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>🔢 Numbers</h4>
+                                        <p>Whole numbers and decimals don't need quotes when printing.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>⚙️ Functions</h4>
+                                        <p>print() is a function - it takes input and does something with it.</p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -238,7 +410,7 @@ print('Single quotes work')
                                 <p>Try modifying the code above to print your own message. You can change the text inside the quotes to anything you want!</p>
                                 
                                 <div class="code-playground">
-                                    <h4>Your Turn - Try It Out!</h4>
+                                    <h4>Your Turn - Creative Printing Practice!</h4>
                                     <div class="code-block">
                                         <div class="code-header">
                                             <span class="code-language">Python</span>
@@ -251,84 +423,106 @@ print("Hello! My name is [Your Name]")
 print("I am learning Python programming")
 print("This is my first coding exercise!")
 
-# Add more print statements below:
-# print("I live in [Your City]")
-# print("My favorite hobby is [Your Hobby]")
-# print("I want to learn Python because [Your Reason]")
+# Add your own creative prints below this line:
+print("I live in [Your City]")
+print("My favorite hobby is [Your Hobby]")
+print("I want to learn Python because [Your Reason]")
 
-# Experiment with different messages!</code></pre>
+# Try printing some numbers about yourself
+print("My age:", 0)  # Replace 0 with your age
+print("My favorite number:", 0)  # Replace with your favorite number
+
+# Get creative with symbols and spacing
+print("=" * 30)  # This will print 30 equal signs in a row
+print("★ My Programming Goals ★")
+print("=" * 30)
+print("1. Learn Python basics")
+print("2. Build my first project")
+print("3. Have fun coding!")
+print("=" * 30)
+
+# Experiment with different messages!
+# Remember: text needs quotes, numbers don't</code></pre>
                                     </div>
                                     <div class="exercise-instructions">
                                         <p><strong>🎯 Practice Exercise:</strong></p>
                                         <ul>
                                             <li>Copy this code to your Python editor</li>
                                             <li>Replace [Your Name], [Your City], etc. with your own information</li>
-                                            <li>Uncomment the lines by removing the # symbol</li>
-                                            <li>Add your own print statements</li>
+                                            <li>Change the numbers to reflect your actual age and favorite number</li>
+                                            <li>Add at least 3 more print statements about yourself</li>
+                                            <li>Try mixing text and numbers in creative ways</li>
+                                            <li>Experiment with symbols and special characters</li>
                                             <li>Run the program and see your personalized output!</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="key-concepts">
-                                <h3>Key Concepts</h3>
-                                <div class="concept-grid">
-                                    <div class="concept-card">
-                                        <h4>Syntax</h4>
-                                        <p>Python uses indentation and simple syntax, making it easy to read and write.</p>
-                                    </div>
-                                    <div class="concept-card">
-                                        <h4>Functions</h4>
-                                        <p>Built-in functions like print() help you perform common tasks quickly.</p>
-                                    </div>
-                                    <div class="concept-card">
-                                        <h4>Strings</h4>
-                                        <p>Text in Python is handled as strings, enclosed in quotes.</p>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="mini-project">
-                                <h3>Mini Project: Personal Introduction</h3>
-                                <p>Create a program that introduces yourself with multiple print statements. Include your name, age, and a fun fact about yourself!</p>
+                                <h3>Mini Project: Personal Introduction Display</h3>
+                                <p>Create a program that introduces yourself with multiple print statements. Include your name, age, a fun fact, and format it to look professional!</p>
                                 
                                 <div class="project-playground">
-                                    <h4>Mini Project: Personal Introduction</h4>
+                                    <h4>Mini Project: Personal Introduction Card</h4>
                                     <div class="code-block">
                                         <div class="code-header">
                                             <span class="code-language">Python</span>
                                             <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                                         </div>
-                                        <pre><code># Mini Project: Personal Introduction
-# Create a program that introduces yourself
+                                        <pre><code># Mini Project: Personal Introduction Card
+# Create a program that introduces yourself in a formatted way
 
-print("=== Personal Introduction ===")
-print()  # This creates a blank line
+# Header with decorative border
+print("╔" + "═" * 40 + "╗")
+print("║" + " " * 40 + "║")
+print("║" + "    PERSONAL INTRODUCTION CARD    ".center(40) + "║")
+print("║" + " " * 40 + "║")
+print("╚" + "═" * 40 + "╝")
+print()  # Blank line for spacing
 
-# Your basic information
+# Basic information section
+print("📋 BASIC INFORMATION")
+print("-" * 25)
 print("Name: [Enter your name here]")
 print("Age: [Enter your age here]")
 print("Location: [Enter your city/country]")
+print("Status: Beginner Python Programmer")
 print()
 
-# Fun facts about yourself
-print("Fun Facts About Me:")
+# Fun facts section
+print("🌟 FUN FACTS ABOUT ME")
+print("-" * 25)
 print("• I am learning Python programming")
 print("• My favorite programming language so far is Python")
 print("• I enjoy solving problems with code")
 print("• [Add your own fun fact here]")
+print("• [Add another fun fact here]")
 print()
 
-# Your goals
-print("My Programming Goals:")
+# Goals section
+print("🎯 MY PROGRAMMING GOALS")
+print("-" * 25)
 print("1. Master Python basics")
 print("2. Build my first real project")
 print("3. [Add your own goal here]")
+print("4. [Add another goal here]")
+print("5. Become a confident programmer!")
 print()
 
-print("Thanks for reading about me!")
-print("Happy coding! 🐍")</code></pre>
+# Footer with motivational message
+print("💡 PROGRAMMING MOTTO")
+print("-" * 25)
+print('"[Write your own motivational quote here]"')
+print()
+print("🐍 Happy Python Coding! 🐍")
+print("Generated by:", "[Your Name]'s Python Program")
+
+# Fun decorative ending
+print()
+print("★" * 45)
+print("★" + " Welcome to my Python journey! ".center(43) + "★")
+print("★" * 45)</code></pre>
                                     </div>
                                     <div class="project-instructions">
                                         <p><strong>🚀 Mini Project Challenge:</strong></p>
@@ -337,11 +531,18 @@ print("Happy coding! 🐍")</code></pre>
                                             <li>Replace all the placeholder text in brackets</li>
                                             <li>Add at least 2 more fun facts about yourself</li>
                                             <li>Add 2 more programming goals</li>
-                                            <li>Save as <code>introduction.py</code> and run it</li>
-                                            <li><strong>Bonus:</strong> Add emojis and creative formatting!</li>
+                                            <li>Write your own motivational quote</li>
+                                            <li>Save as <code>introduction_card.py</code> and run it</li>
+                                            <li><strong>Bonus:</strong> Try changing the border characters or adding more sections!</li>
                                         </ul>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="remember-box">
+                                <h4>💡 Remember:</h4>
+                                <p><strong>Every programmer started exactly where you are now!</strong></p>
+                                <p>The print() function is your first tool for making the computer communicate. Master this simple concept, and you're ready to build more complex programs. Practice printing different types of messages and get comfortable with quotes and comments.</p>
                             </div>
 
                             <div class="lesson-navigation-buttons">
@@ -457,137 +658,94 @@ x = True             # Not descriptive
                                 </div>
                             </div>
 
-                            <h3>Variables and Functions: Understanding Scope</h3>
-                            <p>One of the most confusing aspects for beginners is how variables work inside and outside of functions. Let's break this down step by step.</p>
-
-                            <div class="important-note">
-                                <h3>🎯 Variable Scope Explained</h3>
-                                <p>Variable <strong>scope</strong> determines where in your code a variable can be used. Think of it like rooms in a house - some things are only available in certain rooms!</p>
-                                
-                                <div class="scope-explanation">
-                                    <h4>Global Variables (Available Everywhere)</h4>
-                                    <p>Variables created outside of functions can be used anywhere in your program.</p>
-                                    
-                                    <h4>Local Variables (Only Available Inside Functions)</h4>
-                                    <p>Variables created inside functions can only be used within that specific function.</p>
-                                </div>
-
-                                <div class="code-example">
-                                    <h4>Example: Global vs Local Variables</h4>
-                                    <div class="code-block">
-                                        <div class="code-header">
-                                            <span class="code-language">Python</span>
-                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                                        </div>
-                                        <pre><code># Global variable (can be used anywhere)
-global_name = "Alice"
-
-def greet_user():
-    # Local variable (only exists inside this function)
-    local_greeting = "Hello there!"
-    
-    # This function can use both global and local variables
-    print(local_greeting, global_name)
-    
-    # Create another local variable
-    excitement_level = "very excited"
-    print(f"I am {excitement_level} to learn Python!")
-
-# Call the function
-greet_user()
-
-# This works - global variable is accessible
-print("Global name outside function:", global_name)
-
-# This would cause an ERROR - local variables don't exist outside the function
-# print(local_greeting)  # NameError: name 'local_greeting' is not defined
-# print(excitement_level)  # NameError: name 'excitement_level' is not defined</code></pre>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <h3>Passing Variables to Functions</h3>
-                            <p>Functions can receive variables as inputs (called parameters or arguments). This is how you share data with functions.</p>
+                            <h3>Using Variables Together</h3>
+                            <p>Now that you know how to create variables, let's see how they work together in a program. You can use multiple variables in calculations and print statements.</p>
 
                             <div class="code-example">
-                                <h4>Example: Functions with Parameters</h4>
+                                <h4>Example: Working with Multiple Variables</h4>
                                 <div class="code-block">
                                     <div class="code-header">
                                         <span class="code-language">Python</span>
                                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                                     </div>
-                                    <pre><code># Functions that accept variables as input
-def introduce_person(name, age, city):
-    # name, age, and city are local variables inside this function
-    print(f"Hi! My name is {name}")
-    print(f"I am {age} years old")
-    print(f"I live in {city}")
-    
-    # You can create more local variables inside the function
-    introduction_complete = True
-    print("Introduction complete:", introduction_complete)
+                                    <pre><code># Create multiple variables
+first_name = "Alice"
+last_name = "Johnson"
+age = 25
+height = 5.6
+is_student = True
+favorite_number = 7
 
-# Variables to pass to the function
-student_name = "Bob"
-student_age = 22
-student_city = "New York"
+# Use variables together
+full_name = first_name + " " + last_name
+print("Full name:", full_name)
 
-# Call the function with variables
-introduce_person(student_name, student_age, student_city)
+# Mix variables with text
+print("Hello! My name is", first_name)
+print("I am", age, "years old")
+print("My height is", height, "feet")
+print("Am I a student?", is_student)
+print("My favorite number is", favorite_number)
 
-# You can also pass values directly
-introduce_person("Carol", 19, "Los Angeles")
+# Do calculations with variables
+next_year_age = age + 1
+print("Next year I will be", next_year_age, "years old")
 
-# The local variables from inside the function don't exist here
-# print(introduction_complete)  # This would cause an error</code></pre>
+# Create new variables from existing ones
+age_in_months = age * 12
+print("I am approximately", age_in_months, "months old")
+
+# Check if someone can vote (18 or older)
+can_vote = age >= 18
+print("Can vote:", can_vote)</code></pre>
                                 </div>
                             </div>
 
-                            <h3>Returning Variables from Functions</h3>
-                            <p>Functions can send variables back as output using the <code>return</code> statement. This is how functions share their results with the rest of your program.</p>
+                            <h3>Changing Variable Values</h3>
+                            <p>Variables can be updated after you create them. This is very useful for keeping track of changing information.</p>
 
                             <div class="code-example">
-                                <h4>Example: Functions that Return Variables</h4>
+                                <h4>Example: Updating Variables</h4>
                                 <div class="code-block">
                                     <div class="code-header">
                                         <span class="code-language">Python</span>
                                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                                     </div>
-                                    <pre><code># Function that calculates and returns a result
-def calculate_total_cost(item_price, tax_rate):
-    # Local variables for calculations
-    tax_amount = item_price * tax_rate
-    total_cost = item_price + tax_amount
-    
-    # Return the result so it can be used outside the function
-    return total_cost
+                                    <pre><code># Start with some variables
+score = 0
+level = 1
+player_name = "Beginner"
 
-# Function that processes text and returns multiple values
-def analyze_name(full_name):
-    # Local variables for processing
-    name_length = len(full_name)
-    name_upper = full_name.upper()
-    name_lower = full_name.lower()
-    
-    # Return multiple values
-    return name_length, name_upper, name_lower
+print("=== GAME START ===")
+print("Player:", player_name)
+print("Level:", level)
+print("Score:", score)
+print()
 
-# Using functions that return variables
-price = 100.0
-tax = 0.08
+# Update the variables as the game progresses
+print("Player completes first challenge...")
+score = score + 100
+print("New score:", score)
+print()
 
-# The returned value is stored in a new variable
-final_cost = calculate_total_cost(price, tax)
-print(f"Final cost: ${final_cost:.2f}")
+print("Player levels up...")
+level = level + 1
+player_name = "Intermediate"
+print("New level:", level)
+print("New status:", player_name)
+print()
 
-# Receiving multiple returned values
-user_name = "Alice Johnson"
-length, upper_name, lower_name = analyze_name(user_name)
+print("Player gets bonus points...")
+bonus = 50
+score = score + bonus
+print("Bonus added:", bonus)
+print("Final score:", score)
+print()
 
-print(f"Name: {user_name}")
-print(f"Length: {length}")
-print(f"Uppercase: {upper_name}")
-print(f"Lowercase: {lower_name}")</code></pre>
+print("=== GAME SUMMARY ===")
+print("Final player status:", player_name)
+print("Final level:", level)
+print("Final score:", score)</code></pre>
                                 </div>
                             </div>
 
@@ -604,25 +762,7 @@ my_name = "Alice"
 print(my_name)</code></pre>
                                 </div>
 
-                                <h4>❌ Mistake 2: Trying to use local variables outside functions</h4>
-                                <div class="code-block">
-                                    <pre><code># WRONG:
-def my_function():
-    local_var = "Hello"
-
-my_function()
-print(local_var)  # NameError!
-
-# CORRECT:
-def my_function():
-    local_var = "Hello"
-    return local_var  # Return the value
-
-result = my_function()
-print(result)</code></pre>
-                                </div>
-
-                                <h4>❌ Mistake 3: Confusing variable types</h4>
+                                <h4>❌ Mistake 2: Confusing variable types</h4>
                                 <div class="code-block">
                                     <pre><code># WRONG:
 age = "25"  # This is a string, not a number
@@ -633,85 +773,102 @@ age = 25  # This is a number
 next_year = age + 1
 print(next_year)  # Works perfectly</code></pre>
                                 </div>
+
+                                <h4>❌ Mistake 3: Forgetting quotes for text</h4>
+                                <div class="code-block">
+                                    <pre><code># WRONG:
+name = Alice  # NameError!
+
+# CORRECT:
+name = "Alice"  # Text needs quotes
+print(name)</code></pre>
+                                </div>
+
+                                <h4>❌ Mistake 4: Mixing up variable names</h4>
+                                <div class="code-block">
+                                    <pre><code># WRONG:
+user_name = "Bob"
+print(username)  # NameError! Wrong variable name
+
+# CORRECT:
+user_name = "Bob"
+print(user_name)  # Correct variable name</code></pre>
+                                </div>
                             </div>
 
                             <div class="practice-section">
-                                <h3>Practice Exercise: Variables and Functions</h3>
+                                <h3>Practice Exercise: Variables in Action</h3>
                                 <div class="code-playground">
-                                    <h4>Build a Personal Profile System</h4>
+                                    <h4>Build Your Personal Profile</h4>
                                     <div class="code-block">
                                         <div class="code-header">
                                             <span class="code-language">Python</span>
                                             <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                                         </div>
-                                        <pre><code># Practice: Create variables and functions together
+                                        <pre><code># Practice: Create and use variables together
 
-# Global variables (available everywhere)
-app_name = "Personal Profile System"
-version = "1.0"
+# Personal information variables
+first_name = "[Your First Name]"
+last_name = "[Your Last Name]"
+age = 0  # Replace with your age
+favorite_color = "[Your Favorite Color]"
+hobby = "[Your Hobby]"
+favorite_number = 0  # Replace with your favorite number
 
-def create_profile(first_name, last_name, age, hobby):
-    """
-    This function creates a user profile using the provided information.
-    All parameters are local variables inside this function.
-    """
-    # Local variables for processing
-    full_name = first_name + " " + last_name
-    is_adult = age >= 18
-    profile_id = len(full_name) * age  # Simple ID calculation
-    
-    # Create a profile summary
-    profile_summary = f"""
-    === USER PROFILE ===
-    Name: {full_name}
-    Age: {age}
-    Adult: {is_adult}
-    Hobby: {hobby}
-    Profile ID: {profile_id}
-    """
-    
-    # Return multiple pieces of information
-    return full_name, is_adult, profile_id, profile_summary
+# Create new variables from existing ones
+full_name = first_name + " " + last_name
+age_next_year = age + 1
+age_in_months = age * 12
 
-def display_app_info():
-    """
-    This function uses global variables to show app information.
-    """
-    print(f"Welcome to {app_name} v{version}")
-    print("-" * 40)
+# Display your profile
+print("=" * 40)
+print("        MY PERSONAL PROFILE")
+print("=" * 40)
+print()
 
-# Main program execution
-display_app_info()
+print("📋 BASIC INFORMATION:")
+print("Name:", full_name)
+print("Age:", age, "years old")
+print("Next year I'll be:", age_next_year)
+print("That's about", age_in_months, "months!")
+print()
 
-# Your variables (replace with your own information)
-my_first_name = "[Your First Name]"
-my_last_name = "[Your Last Name]"
-my_age = 0  # Replace with your age
-my_hobby = "[Your Hobby]"
+print("🎨 PREFERENCES:")
+print("Favorite color:", favorite_color)
+print("Hobby:", hobby)
+print("Lucky number:", favorite_number)
+print()
 
-# Call the function and receive the returned values
-name, adult_status, user_id, summary = create_profile(
-    my_first_name, 
-    my_last_name, 
-    my_age, 
-    my_hobby
-)
+print("🎯 FUN FACTS:")
+# Check if you're an adult
+is_adult = age >= 18
+print("Am I an adult?", is_adult)
 
-# Use the returned variables
-print(summary)
-print(f"\nQuick Facts:")
-print(f"Full Name: {name}")
-print(f"User ID: {user_id}")
-print(f"Can Vote: {adult_status}")</code></pre>
+# Check if your age is even or odd
+age_is_even = age % 2 == 0
+print("Is my age even?", age_is_even)
+
+# Calculate some interesting numbers
+double_age = age * 2
+print("Double my age:", double_age)
+
+half_favorite_number = favorite_number / 2
+print("Half of my favorite number:", half_favorite_number)
+
+print()
+print("=" * 40)
+print("Thanks for reading my profile!")
+print("Created by:", first_name)</code></pre>
                                     </div>
                                     <div class="exercise-instructions">
                                         <p><strong>🎯 Your Challenge:</strong></p>
                                         <ul>
-                                            <li>Replace the placeholder values with your own information</li>
-                                            <li>Run the program and see how variables flow between functions</li>
-                                            <li>Try modifying the <code>profile_id</code> calculation</li>
-                                            <li>Add a new function that calculates birth year using the age</li>
-                                            <li>Experiment with different data types for the variables</li>
+                                            <li>Replace all the placeholder values with your own information</li>
+                                            <li>Run the program and see how variables work together</li>
+                                            <li>Try changing your age and see how it affects the calculations</li>
+                                            <li>Add 3 more variables about yourself (like favorite food, pet name, etc.)</li>
+                                            <li>Create new calculations using your variables</li>
+                                            <li>Experiment with different data types</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -721,28 +878,28 @@ print(f"Can Vote: {adult_status}")</code></pre>
                                 <h3>Key Takeaways</h3>
                                 <div class="concept-grid">
                                     <div class="concept-card">
-                                        <h4>🎯 Variable Scope</h4>
-                                        <p>Global variables work everywhere. Local variables only work inside their function.</p>
+                                        <h4>📦 Variables Store Data</h4>
+                                        <p>Variables are containers that hold different types of information for your programs.</p>
                                     </div>
                                     <div class="concept-card">
-                                        <h4>📥 Function Parameters</h4>
-                                        <p>Use parameters to send variables into functions as input data.</p>
+                                        <h4>🏷️ Good Naming</h4>
+                                        <p>Use clear, descriptive names with lowercase and underscores (snake_case).</p>
                                     </div>
                                     <div class="concept-card">
-                                        <h4>📤 Return Values</h4>
-                                        <p>Use return statements to send variables out of functions as results.</p>
+                                        <h4>� Variables Change</h4>
+                                        <p>You can update variables by assigning new values to them.</p>
                                     </div>
                                     <div class="concept-card">
-                                        <h4>🏷️ Naming Convention</h4>
-                                        <p>Use clear, descriptive names with lowercase and underscores.</p>
+                                        <h4>🧮 Math with Variables</h4>
+                                        <p>Use variables in calculations and combine them to create new information.</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="remember-box">
                                 <h4>💡 Remember:</h4>
-                                <p><strong>Variables are the building blocks of programming!</strong></p>
-                                <p>Understanding how they work with functions is crucial for writing effective Python code. Practice creating functions that accept variables and return results.</p>
+                                <p><strong>Variables are the foundation of programming!</strong></p>
+                                <p>Think of them as labeled boxes that store information you can use later. Practice creating variables, updating them, and using them together in calculations and print statements.</p>
                             </div>
 
                             <div class="lesson-navigation-buttons">
@@ -753,64 +910,448 @@ print(f"Can Vote: {adult_status}")</code></pre>
 
                         <div class="lesson-content hidden" id="lesson-3">
                             <h2>Lesson 3: Basic Operations</h2>
-                            <p>Learn how to perform mathematical operations and work with strings in Python.</p>
+                            <p>Now that you know how to store data in variables, let's learn how to manipulate and work with that data! Python can perform mathematical calculations, work with text, and much more.</p>
                             
-                            <h3>Mathematical Operations</h3>
-                            <p>Python supports all basic mathematical operations and more!</p>
+                            <h3>Mathematical Operations - Your Calculator Just Got Smarter</h3>
+                            <p>Python can handle all the math you need, from simple addition to complex calculations. Let's explore each operation in detail.</p>
 
-                            <div class="code-example">
-                                <h4>Example: Math Operations</h4>
-                                <div class="code-block">
-                                    <div class="code-header">
-                                        <span class="code-language">Python</span>
-                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
-                                    </div>
-                                    <pre><code># Basic math operations
-a = 10
-b = 3
-
-print("Addition:", a + b)        # 13
-print("Subtraction:", a - b)     # 7
-print("Multiplication:", a * b)  # 30
-print("Division:", a / b)        # 3.333...
-print("Floor Division:", a // b) # 3
-print("Modulus (remainder):", a % b)  # 1
-print("Exponentiation:", a ** b) # 1000
-
-# Order of operations (PEMDAS)
-result = 2 + 3 * 4
-print("2 + 3 * 4 =", result)    # 14 (not 20!)</code></pre>
+                            <div class="important-note">
+                                <h3>🧮 Python's Math Operations</h3>
+                                <div class="math-operations">
+                                    <h4>The Big Seven Math Operations:</h4>
+                                    <ul>
+                                        <li><strong>Addition (+)</strong> - Adds numbers together</li>
+                                        <li><strong>Subtraction (-)</strong> - Takes one number away from another</li>
+                                        <li><strong>Multiplication (*)</strong> - Multiplies numbers</li>
+                                        <li><strong>Division (/)</strong> - Divides and gives decimal result</li>
+                                        <li><strong>Floor Division (//)</strong> - Divides and rounds down to whole number</li>
+                                        <li><strong>Modulus (%)</strong> - Gives the remainder after division</li>
+                                        <li><strong>Exponentiation (**)</strong> - Raises a number to a power</li>
+                                    </ul>
                                 </div>
                             </div>
 
-                            <h3>String Operations</h3>
                             <div class="code-example">
-                                <h4>Example: Working with Strings</h4>
+                                <h4>Example: Basic Math Operations Explained</h4>
                                 <div class="code-block">
                                     <div class="code-header">
                                         <span class="code-language">Python</span>
                                         <button class="copy-btn" onclick="copyCode(this)">Copy</button>
                                     </div>
-                                    <pre><code># String operations
+                                    <pre><code># Store numbers in variables to use in calculations
+a = 10
+b = 3
+
+print("Starting numbers: a =", a, "and b =", b)
+print("=" * 40)
+
+# Addition - combining numbers
+sum_result = a + b
+print("Addition:", a, "+", b, "=", sum_result)
+
+# Subtraction - finding the difference
+difference = a - b
+print("Subtraction:", a, "-", b, "=", difference)
+
+# Multiplication - repeated addition
+product = a * b
+print("Multiplication:", a, "×", b, "=", product)
+
+# Division - splitting into equal parts
+quotient = a / b
+print("Division:", a, "÷", b, "=", quotient)
+
+# Floor Division - division rounded down
+floor_div = a // b
+print("Floor Division:", a, "//", b, "=", floor_div)
+
+# Modulus - the remainder after division
+remainder = a % b
+print("Modulus (remainder):", a, "%", b, "=", remainder)
+
+# Exponentiation - raising to a power
+power = a ** b
+print("Exponentiation:", a, "to the power of", b, "=", power)
+
+print("=" * 40)
+print("All operations completed!")</code></pre>
+                                </div>
+                                <div class="run-instructions">
+                                    <p><strong>💡 Try this:</strong></p>
+                                    <ol>
+                                        <li>Change the values of a and b to different numbers</li>
+                                        <li>Run the program and see how the results change</li>
+                                        <li>Try negative numbers, decimals, and larger numbers</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <h3>Understanding Order of Operations (PEMDAS)</h3>
+                            <p>Just like in math class, Python follows a specific order when doing calculations. Understanding this prevents confusing results!</p>
+
+                            <div class="important-note">
+                                <h3>🎯 PEMDAS Rule in Python</h3>
+                                <div class="pemdas-explanation">
+                                    <h4>Python calculates in this order:</h4>
+                                    <ol>
+                                        <li><strong>P</strong>arentheses: () - Always calculated first</li>
+                                        <li><strong>E</strong>xponents: ** - Powers and roots</li>
+                                        <li><strong>M</strong>ultiplication and <strong>D</strong>ivision: *, /, //, % - Left to right</li>
+                                        <li><strong>A</strong>ddition and <strong>S</strong>ubtraction: +, - - Left to right</li>
+                                    </ol>
+                                </div>
+
+                                <div class="code-example">
+                                    <h4>Example: Order of Operations in Action</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">Python</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code># Understanding order of operations
+print("Order of Operations Examples:")
+print("=" * 35)
+
+# Without parentheses - follows PEMDAS
+result1 = 2 + 3 * 4
+print("2 + 3 * 4 =", result1)  # 14 (not 20!)
+print("Calculation: 2 + (3 * 4) = 2 + 12 = 14")
+print()
+
+# With parentheses - changes the order
+result2 = (2 + 3) * 4
+print("(2 + 3) * 4 =", result2)  # 20
+print("Calculation: (2 + 3) * 4 = 5 * 4 = 20")
+print()
+
+# More complex example
+result3 = 2 ** 3 + 4 * 5 - 6 / 2
+print("2 ** 3 + 4 * 5 - 6 / 2 =", result3)
+print("Step by step:")
+print("1. 2 ** 3 = 8 (exponents first)")
+print("2. 4 * 5 = 20 (multiplication)")
+print("3. 6 / 2 = 3.0 (division)")
+print("4. 8 + 20 - 3.0 = 25.0 (addition and subtraction left to right)")
+print()
+
+# Using parentheses to be clear
+result4 = ((2 ** 3) + (4 * 5)) - (6 / 2)
+print("With parentheses for clarity:", result4)
+print("Same result, but clearer to read!")</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3>Working with Different Number Types</h3>
+                            <p>Python handles different types of numbers automatically, but understanding the differences helps you write better programs.</p>
+
+                            <div class="code-example">
+                                <h4>Example: Integers vs Floats in Operations</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Different number types in calculations
+print("Working with Different Number Types:")
+print("=" * 40)
+
+# Integers (whole numbers)
+whole_number1 = 10
+whole_number2 = 3
+print("Integers:", whole_number1, "and", whole_number2)
+
+# Floats (decimal numbers)
+decimal_number1 = 10.5
+decimal_number2 = 3.2
+print("Floats:", decimal_number1, "and", decimal_number2)
+print()
+
+# Integer operations
+print("INTEGER OPERATIONS:")
+print(f"{whole_number1} + {whole_number2} = {whole_number1 + whole_number2}")
+print(f"{whole_number1} - {whole_number2} = {whole_number1 - whole_number2}")
+print(f"{whole_number1} * {whole_number2} = {whole_number1 * whole_number2}")
+print(f"{whole_number1} / {whole_number2} = {whole_number1 / whole_number2}")  # Always gives float!
+print(f"{whole_number1} // {whole_number2} = {whole_number1 // whole_number2}")  # Integer result
+print()
+
+# Float operations
+print("FLOAT OPERATIONS:")
+print(f"{decimal_number1} + {decimal_number2} = {decimal_number1 + decimal_number2}")
+print(f"{decimal_number1} - {decimal_number2} = {decimal_number1 - decimal_number2}")
+print(f"{decimal_number1} * {decimal_number2} = {decimal_number1 * decimal_number2}")
+print(f"{decimal_number1} / {decimal_number2} = {decimal_number1 / decimal_number2}")
+print()
+
+# Mixing integers and floats
+print("MIXING INTEGERS AND FLOATS:")
+mixed_result = whole_number1 + decimal_number1
+print(f"{whole_number1} + {decimal_number1} = {mixed_result}")
+print("Result is automatically a float!")
+
+# Rounding results
+pi = 3.14159
+print(f"Pi = {pi}")
+print(f"Pi rounded to 2 decimal places: {round(pi, 2)}")
+print(f"Pi rounded to nearest whole number: {round(pi)}")</code></pre>
+                                </div>
+                            </div>
+
+                            <h3>String Operations - Working with Text</h3>
+                            <p>Strings (text) have their own special operations. You can combine them, repeat them, and transform them in many useful ways!</p>
+
+                            <div class="code-example">
+                                <h4>Example: String Operations Mastery</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Working with strings (text)
+print("STRING OPERATIONS GUIDE:")
+print("=" * 30)
+
+# Basic string variables
 first_name = "Python"
 last_name = "Programming"
+programming_language = "Python"
 
-# Concatenation (joining strings)
+print("Starting strings:")
+print(f"First name: '{first_name}'")
+print(f"Last name: '{last_name}'")
+print(f"Language: '{programming_language}'")
+print()
+
+# STRING CONCATENATION (joining strings)
+print("1. CONCATENATION (Joining Strings):")
 full_name = first_name + " " + last_name
-print("Full name:", full_name)
+print(f"'{first_name}' + ' ' + '{last_name}' = '{full_name}'")
 
-# String repetition
+# You can add multiple strings
+greeting = "Hello, " + "my name is " + first_name + "!"
+print(f"Complex concatenation: '{greeting}'")
+print()
+
+# STRING REPETITION (repeating strings)
+print("2. REPETITION (Repeating Strings):")
 excited = "Wow! " * 3
-print(excited)  # Wow! Wow! Wow! 
+print(f"'Wow! ' * 3 = '{excited}'")
 
-# String length
-print("Length of full name:", len(full_name))
+# Create patterns with repetition
+separator = "-" * 20
+print(f"Separator: '{separator}'")
 
-# String methods
-print("Uppercase:", full_name.upper())
-print("Lowercase:", full_name.lower())
-print("Title case:", full_name.title())</code></pre>
+# Combine repetition with other strings
+celebration = "🎉 " * 5
+print(f"Celebration: '{celebration}'")
+print()
+
+# STRING INFORMATION (learning about strings)
+print("3. STRING INFORMATION:")
+sample_text = "Hello, Python Programmer!"
+print(f"Sample text: '{sample_text}'")
+print(f"Length (number of characters): {len(sample_text)}")
+print(f"Type of variable: {type(sample_text)}")
+print()
+
+# STRING TRANSFORMATIONS (changing how strings look)
+print("4. STRING TRANSFORMATIONS:")
+sample_word = "PyThOn PrOgRaMmInG"
+print(f"Original: '{sample_word}'")
+print(f"Uppercase: '{sample_word.upper()}'")
+print(f"Lowercase: '{sample_word.lower()}'")
+print(f"Title Case: '{sample_word.title()}'")
+print(f"Capitalize: '{sample_word.capitalize()}'")
+print()
+
+# STRING CHECKING (asking questions about strings)
+print("5. STRING CHECKING:")
+check_text = "Python is awesome"
+print(f"Text to check: '{check_text}'")
+print(f"Starts with 'Python': {check_text.startswith('Python')}")
+print(f"Ends with 'awesome': {check_text.endswith('awesome')}")
+print(f"Contains 'is': {'is' in check_text}")
+print(f"Contains 'Java': {'Java' in check_text}")
+print()
+
+# COMBINING STRINGS AND NUMBERS
+print("6. STRINGS AND NUMBERS:")
+user_age = 25
+score = 95.5
+message = "I am " + str(user_age) + " years old and scored " + str(score) + " points!"
+print(f"Combined message: '{message}'")
+print("Note: We used str() to convert numbers to strings for concatenation")</code></pre>
                                 </div>
+                            </div>
+
+                            <h3>Practical Applications: Real-World Examples</h3>
+                            <p>Let's see how these operations are used in real programming scenarios!</p>
+
+                            <div class="code-example">
+                                <h4>Example: Building a Simple Calculator</h4>
+                                <div class="code-block">
+                                    <div class="code-header">
+                                        <span class="code-language">Python</span>
+                                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                    </div>
+                                    <pre><code># Simple Calculator using operations we've learned
+print("🧮 PYTHON CALCULATOR 🧮")
+print("=" * 25)
+
+# Numbers to calculate with
+num1 = 15
+num2 = 4
+
+print(f"Number 1: {num1}")
+print(f"Number 2: {num2}")
+print("-" * 25)
+
+# Perform all operations
+addition_result = num1 + num2
+subtraction_result = num1 - num2
+multiplication_result = num1 * num2
+division_result = num1 / num2
+floor_division_result = num1 // num2
+remainder_result = num1 % num2
+power_result = num1 ** num2
+
+# Display results in a nice format
+print("CALCULATION RESULTS:")
+print(f"📍 Addition:      {num1} + {num2} = {addition_result}")
+print(f"📍 Subtraction:   {num1} - {num2} = {subtraction_result}")
+print(f"📍 Multiplication: {num1} × {num2} = {multiplication_result}")
+print(f"📍 Division:      {num1} ÷ {num2} = {division_result}")
+print(f"📍 Floor Division: {num1} // {num2} = {floor_division_result}")
+print(f"📍 Remainder:     {num1} % {num2} = {remainder_result}")
+print(f"📍 Power:         {num1} ^ {num2} = {power_result}")
+
+print("-" * 25)
+print("Calculator session complete! ✅")</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="practice-section">
+                                <h3>Practice Exercise: Math and String Wizard</h3>
+                                <div class="code-playground">
+                                    <h4>Build Your Own Math & Text Processor</h4>
+                                    <div class="code-block">
+                                        <div class="code-header">
+                                            <span class="code-language">Python</span>
+                                            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                        </div>
+                                        <pre><code># Practice: Math and String Operations
+print("🎯 MATH & STRING WIZARD 🎯")
+print("=" * 30)
+
+# YOUR PERSONAL DATA (replace with real values)
+your_age = 20  # Replace with your age
+birth_year = 2025 - your_age  # Calculate birth year
+favorite_number = 7  # Replace with your favorite number
+your_name = "Your Name"  # Replace with your name
+hobby = "coding"  # Replace with your hobby
+
+print("PERSONAL INFORMATION:")
+print(f"Name: {your_name}")
+print(f"Age: {your_age}")
+print(f"Birth Year: {birth_year}")
+print(f"Favorite Number: {favorite_number}")
+print(f"Hobby: {hobby}")
+print()
+
+# MATH CALCULATIONS WITH YOUR DATA
+print("MATH CALCULATIONS:")
+age_squared = your_age ** 2
+age_plus_fav = your_age + favorite_number
+years_to_100 = 100 - your_age
+age_divided = your_age / 2
+
+print(f"Your age squared: {your_age}² = {age_squared}")
+print(f"Age + favorite number: {your_age} + {favorite_number} = {age_plus_fav}")
+print(f"Years until you're 100: 100 - {your_age} = {years_to_100}")
+print(f"Half your age: {your_age} ÷ 2 = {age_divided}")
+print()
+
+# STRING OPERATIONS WITH YOUR DATA
+print("STRING OPERATIONS:")
+name_length = len(your_name)
+name_upper = your_name.upper()
+name_lower = your_name.lower()
+repeated_hobby = hobby * 3
+greeting = "Hello, my name is " + your_name + " and I love " + hobby + "!"
+
+print(f"Name length: {name_length} characters")
+print(f"Name in uppercase: {name_upper}")
+print(f"Name in lowercase: {name_lower}")
+print(f"Hobby repeated 3 times: {repeated_hobby}")
+print(f"Personal greeting: {greeting}")
+print()
+
+# CREATIVE COMBINATIONS
+print("CREATIVE COMBINATIONS:")
+celebration = "🎉 " * (your_age // 10)  # One celebration per decade
+border = "★" * name_length
+fun_fact = f"Did you know? {your_name} has {name_length} letters and is {your_age} years old!"
+
+print(f"Celebration (one per decade): {celebration}")
+print(f"Name border: {border}")
+print(f"Fun fact: {fun_fact}")
+print()
+
+# CHALLENGE CALCULATIONS
+print("CHALLENGE CALCULATIONS:")
+# Calculate some interesting things
+minutes_lived = your_age * 365 * 24 * 60  # Approximate minutes lived
+name_value = len(your_name) * favorite_number
+future_age = your_age + 10
+
+print(f"Approximate minutes you've lived: {minutes_lived:,}")
+print(f"Your 'name value' (length × favorite number): {name_value}")
+print(f"Your age in 10 years: {future_age}")
+print()
+
+print("🎯 Math & String Wizard complete! Great job! 🎯")</code></pre>
+                                    </div>
+                                    <div class="exercise-instructions">
+                                        <p><strong>🎯 Your Challenge:</strong></p>
+                                        <ul>
+                                            <li>Replace all the placeholder values with your real information</li>
+                                            <li>Run the program and see your personalized calculations</li>
+                                            <li>Add 3 more math calculations using your data</li>
+                                            <li>Add 3 more string operations with your name or hobby</li>
+                                            <li>Try different mathematical operators and string methods</li>
+                                            <li>Experiment with combining numbers and strings creatively</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="key-concepts">
+                                <h3>Key Concepts Mastered</h3>
+                                <div class="concept-grid">
+                                    <div class="concept-card">
+                                        <h4>🧮 Math Operations</h4>
+                                        <p>Seven essential operations: +, -, *, /, //, %, ** for all calculations.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>📏 Order of Operations</h4>
+                                        <p>PEMDAS rules ensure calculations happen in the right order.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>📝 String Manipulation</h4>
+                                        <p>Concatenation, repetition, and transformations for text processing.</p>
+                                    </div>
+                                    <div class="concept-card">
+                                        <h4>🔗 Combining Data Types</h4>
+                                        <p>Mix numbers and strings to create meaningful output and messages.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="remember-box">
+                                <h4>💡 Remember:</h4>
+                                <p><strong>Operations are the building blocks of programming logic!</strong></p>
+                                <p>Math operations let you calculate and process numbers, while string operations let you work with text. Mastering both gives you the power to create programs that can handle any type of data!</p>
                             </div>
 
                             <div class="lesson-navigation-buttons">
