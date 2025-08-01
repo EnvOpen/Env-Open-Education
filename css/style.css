@@ -698,6 +698,174 @@ body {
     color: #92400e;
 }
 
+/* Important Note Section */
+.important-note {
+    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+    border: 2px solid #2563eb;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+.important-note::before {
+    content: "📚";
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.important-note h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.important-note p {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+/* Quote Explanation */
+.quote-explanation {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
+}
+
+.quote-explanation h4 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+}
+
+.quote-explanation ul {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.quote-explanation li {
+    margin-bottom: 0.5rem;
+    color: #374151;
+}
+
+/* Why Important Section */
+.why-important {
+    background: #f0fdf4;
+    border-left: 4px solid #16a34a;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.why-important h4 {
+    color: #15803d;
+    margin-bottom: 1rem;
+}
+
+.why-important ul {
+    margin-left: 1.5rem;
+}
+
+.why-important li {
+    margin-bottom: 0.8rem;
+    color: #166534;
+}
+
+.why-important strong {
+    color: #15803d;
+}
+
+/* Common Mistakes Section */
+.common-mistakes {
+    background: #fef2f2;
+    border-left: 4px solid #ef4444;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.common-mistakes h4 {
+    color: #dc2626;
+    margin-bottom: 1rem;
+}
+
+.mistake-examples {
+    display: grid;
+    gap: 1rem;
+}
+
+.mistake {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 3px solid #f87171;
+}
+
+.mistake strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.mistake code {
+    background: #fee2e2;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #dc2626;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Remember Box */
+.remember-box {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 2px solid #f59e0b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+    position: relative;
+}
+
+.remember-box::before {
+    content: "💡";
+    font-size: 2rem;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f59e0b;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.remember-box h4 {
+    color: #92400e;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.remember-box p {
+    color: #78350f;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.remember-box p:last-child {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
 .practice-section,
 .mini-project,
 .advanced-example {

@@ -37,23 +37,22 @@ document.addEventListener('DOMContentLoaded', function() {
         calculateTotalLessons();
     }
 
+    // Initialize progress display on page load
+    updateProgress();
+
     // Update progress display
     function updateProgress() {
         const progressText = document.querySelector('.progress-text');
-        const progressFill = document.querySelector('.progress-fill');
-        const progressInfo = document.querySelector('.progress-info span:last-child');
+        const progressCircle = document.querySelector('.progress-circle');
+        const progressInfo = document.querySelector('.progress-card p');
 
-        if (progressText && progressFill) {
+        if (progressText && progressCircle) {
             const percentage = Math.round((courseProgress.completedLessons.length / courseProgress.totalLessons) * 100);
             progressText.textContent = percentage + '%';
-            progressFill.style.width = percentage + '%';
             
-            // Update progress circle
-            const progressCircle = document.querySelector('.progress-circle');
-            if (progressCircle) {
-                const angle = (percentage / 100) * 360;
-                progressCircle.style.background = `conic-gradient(#2563eb ${angle}deg, #e2e8f0 ${angle}deg)`;
-            }
+            // Update progress circle with conic gradient
+            const angle = (percentage / 100) * 360;
+            progressCircle.style.background = `conic-gradient(#2563eb ${angle}deg, #e2e8f0 ${angle}deg)`;
         }
 
         if (progressInfo) {
@@ -192,9 +191,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const nextLessonId = currentLessonId + 1;
         const nextLessonElement = document.getElementById(`lesson-${nextLessonId}`);
+        const currentLessonElement = document.getElementById(`lesson-${currentLessonId}`);
         
         if (nextLessonElement) {
-                        // Hide current lesson
+            // Hide current lesson
             if (currentLessonElement) {
                 currentLessonElement.classList.add('hidden');
             }

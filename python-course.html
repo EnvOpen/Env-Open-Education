@@ -155,6 +155,84 @@ print("I'm learning Python with Env Open Education!")</code></pre>
                                 </ul>
                             </div>
 
+                            <div class="important-note">
+                                <h3>🔍 Understanding Quotes in Python</h3>
+                                <p>One of the most important things to understand when starting with Python is <strong>why we need quotes around text</strong>. This is a common source of confusion for new programmers!</p>
+                                
+                                <div class="quote-explanation">
+                                    <h4>Why Do We Need Quotes?</h4>
+                                    <p>In Python, there's a big difference between:</p>
+                                    <ul>
+                                        <li><strong>Text (strings)</strong> - needs quotes: <code>"Hello"</code></li>
+                                        <li><strong>Code (variables/functions)</strong> - no quotes: <code>print</code></li>
+                                    </ul>
+                                    
+                                    <div class="code-example">
+                                        <h4>Example: With and Without Quotes</h4>
+                                        <div class="code-block">
+                                            <div class="code-header">
+                                                <span class="code-language">Python</span>
+                                                <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                                            </div>
+                                            <pre><code># ✅ CORRECT - Text needs quotes
+print("Hello World")        # This prints: Hello World
+print("Python is fun")     # This prints: Python is fun
+
+# ❌ WRONG - Without quotes, Python thinks it's code
+# print(Hello World)       # This would cause an error!
+# Python would look for variables named "Hello" and "World"
+
+# You can use single quotes too:
+print('Hello with single quotes')
+
+# Both work the same way:
+print("Double quotes work")
+print('Single quotes work')
+
+# But be consistent in your style!</code></pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="why-important">
+                                        <h4>Why Is This Important?</h4>
+                                        <ul>
+                                            <li><strong>Tells Python what's text:</strong> Quotes tell Python "this is text to display, not code to run"</li>
+                                            <li><strong>Prevents errors:</strong> Without quotes, Python will look for variables or functions with those names</li>
+                                            <li><strong>Creates strings:</strong> Anything in quotes becomes a "string" data type that you can work with</li>
+                                            <li><strong>Allows special characters:</strong> You can include spaces, punctuation, and symbols in strings</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="common-mistakes">
+                                        <h4>Common Beginner Mistakes:</h4>
+                                        <div class="mistake-examples">
+                                            <div class="mistake">
+                                                <strong>❌ Forgetting quotes:</strong><br>
+                                                <code>print(Hello)</code> → Error! Python looks for a variable named "Hello"
+                                            </div>
+                                            <div class="mistake">
+                                                <strong>✅ Using quotes:</strong><br>
+                                                <code>print("Hello")</code> → Works! Prints the text "Hello"
+                                            </div>
+                                            <div class="mistake">
+                                                <strong>❌ Mixing quote types:</strong><br>
+                                                <code>print("Hello')</code> → Error! Quotes don't match
+                                            </div>
+                                            <div class="mistake">
+                                                <strong>✅ Matching quotes:</strong><br>
+                                                <code>print("Hello")</code> or <code>print('Hello')</code> → Both work!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="remember-box">
+                                    <h4>💡 Remember:</h4>
+                                    <p><strong>If you want Python to treat something as text, put it in quotes!</strong></p>
+                                    <p>This applies to any text you want to display, store, or work with in your programs.</p>
+                                </div>
+                            </div>
+
                             <div class="practice-section">
                                 <h3>Practice Exercise</h3>
                                 <p>Try modifying the code above to print your own message. You can change the text inside the quotes to anything you want!</p>
